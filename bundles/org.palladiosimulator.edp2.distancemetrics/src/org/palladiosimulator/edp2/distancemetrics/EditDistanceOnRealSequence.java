@@ -1,7 +1,5 @@
 package org.palladiosimulator.edp2.distancemetrics;
 
-import java.util.Iterator;
-
 import javax.measure.quantity.Quantity;
 import javax.measure.unit.Unit;
 
@@ -13,7 +11,7 @@ import org.palladiosimulator.measurementframework.TupleMeasurement;
 /**
  * This algorithm is based on the description of the algorithm described in chapter 3.1
  * in the paper "Robust and Fast Similarity Search for Moving Object
- * Trajectories" by Lei Chen, M. Tamer Özsu, Vincent Oria
+ * Trajectories" by Lei Chen, M. Tamer Ã–zsu, Vincent Oria
  * See: http://www.cs.ucr.edu/~ravi/CS260-ST/Oszu_SIGMOD_05.pdf
  * 
  * @author Christian Schaf
