@@ -16,10 +16,10 @@
 		<module>org.palladiosimulator.edp2.batchexport</module>
 		<module>org.palladiosimulator.edp2.dao</module>
 		<module>org.palladiosimulator.edp2.datastream</module>
-<!--		<module>org.palladiosimulator.edp2.distancemetrics</module>
+		<module>org.palladiosimulator.edp2.distancemetrics</module>
 		<module>org.palladiosimulator.edp2.distancemetrics.r</module>
 		<module>org.palladiosimulator.edp2.distancemetrics.r.ui</module>
-		<module>org.palladiosimulator.edp2.distancemetrics.ui</module>-->
+		<module>org.palladiosimulator.edp2.distancemetrics.ui</module>
 		<module>org.palladiosimulator.edp2.edit</module>
 		<module>org.palladiosimulator.edp2.editor</module>
 		<module>org.palladiosimulator.edp2.examples</module>

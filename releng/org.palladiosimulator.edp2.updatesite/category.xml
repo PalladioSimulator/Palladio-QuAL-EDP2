@@ -18,6 +18,12 @@
 	<feature url="features/org.palladiosimulator.edp2.filter.additional.feature.source_1.0.0.qualifier.jar" id="org.palladiosimulator.edp2.filter.additional.feature.source" version="1.0.0.qualifier">
 	   <category name="org.palladiosimulator.qual.source.category"/>
 	</feature>
+	<feature url="features/org.palladiosimulator.edp2.distancemetrics.feature_1.0.0.qualifier.jar" id="org.palladiosimulator.edp2.distancemetrics.feature" version="1.0.0.qualifier">
+	   <category name="org.palladiosimulator.qual.category"/>
+	</feature>
+	<feature url="features/org.palladiosimulator.edp2.distancemetrics.feature.source_1.0.0.qualifier.jar" id="org.palladiosimulator.edp2.distancemetrics.feature.source" version="1.0.0.qualifier">
+	   <category name="org.palladiosimulator.qual.source.category"/>
+	</feature>
 	<category-def name="org.palladiosimulator.qual.category" label="Quality Analysis Lab">
 	   <description>
 	      The Quality Analysis Lab (QuAL) is responsible for taking measurements from experiments or simulations and their persistance
