@@ -12,6 +12,7 @@
 	<packaging>pom</packaging>
 	
 	<modules>
+		<module>org.palladiosimulator.edp2.mwe2</module>
 		<module>org.palladiosimulator.edp2.updatesite</module>
 	</modules>
 	

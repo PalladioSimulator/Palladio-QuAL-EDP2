@@ -1,0 +1,55 @@
+module generate
+
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import tools.mdsd.ecoreworkflow.mwe2lib.bean.EclipseRCPSupportingStandaloneSetup
+import tools.mdsd.ecoreworkflow.mwe2lib.component.ContextDependentMapping
+import tools.mdsd.ecoreworkflow.mwe2lib.component.URISupportingDirectoryCleaner
+import tools.mdsd.ecoreworkflow.mwe2lib.component.GapPatternPostProcessor
+
+var workspaceRoot = "../../"
+
+Workflow {
+    
+    bean = EclipseRCPSupportingStandaloneSetup {
+        scanClassPath = true
+        platformUri = workspaceRoot
+        
+        uriMap = ContextDependentMapping {
+            onRunningPlatform = "platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel"
+            onStandalone = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel"
+        }
+        
+        uriMap = ContextDependentMapping {
+            onRunningPlatform = "platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore"
+            onStandalone = "platform:/resource/org.palladiosimulator.metricspec/model/metricspec.ecore"
+        }
+        
+        uriMap = ContextDependentMapping {
+            onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+            onStandalone = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+        }
+        
+        uriMap = ContextDependentMapping {
+            onRunningPlatform = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+            onStandalone = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+        }
+        
+        logResourceUriMap = true
+    }
+
+    component = EcoreGenerator {
+        generateCustomClasses = false
+        generateEdit = true
+        generateEditor = true
+        genModel = "platform:/resource/org.palladiosimulator.edp2/model/EDP2.genmodel"
+        srcPath = "platform:/resource/org.palladiosimulator.edp2/src"
+        srcPath = "platform:/resource/org.palladiosimulator.edp2/src-gen"
+    }
+    
+    component = GapPatternPostProcessor {
+        folders = {
+            gen = "platform:/resource/org.palladiosimulator.edp2/src-gen"
+            src = "platform:/resource/org.palladiosimulator.edp2/src"
+        }
+    }   
+}

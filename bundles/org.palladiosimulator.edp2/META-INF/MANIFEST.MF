@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.edp2;singleton:=true
+Automatic-Module-Name: org.palladiosimulator.edp2
 Bundle-Version: 4.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -34,6 +35,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.measurementframework;bundle-version="1.0.0",
  org.palladiosimulator.metricspec;bundle-version="1.0.0";visibility:=reexport,
  org.palladiosimulator.edp2.dao;bundle-version="4.2.0";visibility:=reexport,
- org.palladiosimulator.commons
+ org.palladiosimulator.commons,
+ org.palladiosimulator.edp2.mwe2;bundle-version="4.2.0";resolution:=optional
 Bundle-Activator: org.palladiosimulator.edp2.EDP2Plugin
 Bundle-ActivationPolicy: lazy

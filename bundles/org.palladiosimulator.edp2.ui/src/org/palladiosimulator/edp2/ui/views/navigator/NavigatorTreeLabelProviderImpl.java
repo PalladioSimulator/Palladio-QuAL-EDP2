@@ -302,15 +302,6 @@ public class NavigatorTreeLabelProviderImpl extends StyledCellLabelProvider {
                         return styledString;
                     };
 
-                    @Override
-                    public StyledString caseRemoteCdoRepository(
-                            final org.palladiosimulator.edp2.models.Repository.RemoteCdoRepository object) {
-                        final StyledString styledString = new StyledString("Remote");
-                        final String decoration = " (" + object.getUrl() + ")";
-                        styledString.append(decoration, StyledString.COUNTER_STYLER);
-                        return styledString;
-                    };
-
                 }.doSwitch(eObject);
             }
             if (styledString == null) {

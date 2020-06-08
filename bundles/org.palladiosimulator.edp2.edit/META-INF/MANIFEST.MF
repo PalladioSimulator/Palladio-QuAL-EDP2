@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.edp2.edit;singleton:=true
+Automatic-Module-Name: org.palladiosimulator.edp2.edit
 Bundle-Version: 4.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.edp2.models.ExperimentData.provider.EDP2EditPlugin$Implementation

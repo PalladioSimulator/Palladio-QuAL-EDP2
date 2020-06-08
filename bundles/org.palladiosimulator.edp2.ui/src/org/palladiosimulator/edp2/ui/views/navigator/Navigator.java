@@ -60,10 +60,9 @@ public class Navigator extends ViewPart implements ITabbedPropertySheetPageContr
 
         // Label Provider; Observe model for change wrt to labels
         final IObservableSet set = contentProvider.getKnownElements();
-        final IObservableMap[] map = new IObservableMap[2];
+        final IObservableMap[] map = new IObservableMap[1];
         //        map[0] = EMFProperties.value(RepositoryPackage.Literals.LOCAL_DIRECTORY_REPOSITORY__URI).observeDetail(set);
         map[0] = EMFProperties.value(RepositoryPackage.Literals.LOCAL_MEMORY_REPOSITORY__DOMAIN).observeDetail(set);
-        map[1] = EMFProperties.value(RepositoryPackage.Literals.REMOTE_CDO_REPOSITORY__URL).observeDetail(set);
         // TODO: Observe other labels
         this.treeViewer.setLabelProvider(new NavigatorTreeLabelProviderImpl(map));
 

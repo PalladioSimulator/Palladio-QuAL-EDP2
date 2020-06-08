@@ -1,451 +1,1109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="models" nsURI="http://palladiosimulator.org/EDP2/1.0" nsPrefix="org.palladiosimulator.edp2">
-  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-    <details key="documentation" value="Experiment Data Persistency and Presentation"/>
+<ecore:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    name="models"
+    nsURI="http://palladiosimulator.org/EDP2/1.0"
+    nsPrefix="org.palladiosimulator.edp2">
+  <eAnnotations
+      source="http://www.eclipse.org/emf/2002/GenModel">
+    <details
+        key="documentation"
+        value="Experiment Data Persistency and Presentation"/>
   </eAnnotations>
-  <eSubpackages name="ExperimentData" nsURI="http://palladiosimulator.org/EDP2/ExperimentData/1.0"
+  <eSubpackages
+      name="ExperimentData"
+      nsURI="http://palladiosimulator.org/EDP2/ExperimentData/1.0"
       nsPrefix="org.palladiosimulator.edp2.models">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="&lt;p align=&quot;left&quot;>&#xD;&#xA;    &lt;font size=&quot;2&quot;>Contains the model elements for the meta data of the experiments.&lt;/font>&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    &lt;font size=&quot;2&quot;>It covers the areas ExperimentsView, MeasureDefinitionView, and DescriptionsView.&lt;/font>&#xD;&#xA;&lt;/p>"/>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="&lt;p align=&quot;left&quot;>&#xD;&#xA;    &lt;font size=&quot;2&quot;>Contains the model elements for the meta data of the experiments.&lt;/font>&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    &lt;font size=&quot;2&quot;>It covers the areas ExperimentsView, MeasureDefinitionView, and DescriptionsView.&lt;/font>&#xD;&#xA;&lt;/p>"/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="AggregatedMeasurements" abstract="true"
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="AggregatedMeasurements"
+        abstract="true"
         eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measurementRange" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/MeasurementRange" eOpposite="#//ExperimentData/MeasurementRange/aggregatedMeasurements"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Marker if the aggregated values are valid or if they are not consistent with the raw measurements."/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measurementRange"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/MeasurementRange"
+          eOpposite="#//ExperimentData/MeasurementRange/aggregatedMeasurements"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="valid"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="Marker if the aggregated values are valid or if they are not consistent with the raw measurements."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="function" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//AggregationFunctionDescription"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="aggregationStatistics"
-          ordered="false" eType="#//ExperimentData/AggregationStatistics" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="function"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//AggregationFunctionDescription"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="aggregationStatistics"
+          ordered="false"
+          eType="#//ExperimentData/AggregationStatistics"
+          containment="true"
           eOpposite="#//ExperimentData/AggregationStatistics/aggregatedMeasurements"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="aggregationOn" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//BaseMetricDescription">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Points to the base metric within the measure definition associated with the measurement of an AggregatedMeasurements instance. The data is aggregated on this base metric."/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="aggregationOn"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//BaseMetricDescription">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="Points to the base metric within the measure definition associated with the measurement of an AggregatedMeasurements instance. The data is aggregated on this base metric."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="metric" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricDescription">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Description of the metric used to express the aggregated data."/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="metric"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricDescription">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="Description of the metric used to express the aggregated data."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="MeasurementRange" eSuperTypes="#//ExperimentData/Propertyable">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The&amp;nbsp;collected&amp;nbsp;data&amp;nbsp;can&amp;nbsp;be&amp;nbsp;split&amp;nbsp;into&amp;nbsp;several&amp;nbsp;measurement&amp;nbsp;ranges.&amp;nbsp;A&amp;nbsp;range&amp;nbsp;is&amp;nbsp;specified&amp;nbsp;as&amp;nbsp;time&amp;nbsp;interval&amp;nbsp;and&amp;nbsp;all&amp;nbsp;measurements&amp;nbsp;falling&amp;nbsp;into&amp;nbsp;a&amp;nbsp;range's&amp;nbsp;interval&amp;nbsp;belong&amp;nbsp;to&amp;nbsp;that&amp;nbsp;range.&amp;nbsp;And&amp;nbsp;only&amp;nbsp;these&amp;nbsp;measurements.&amp;nbsp;The&amp;nbsp;intervals&amp;nbsp;of&amp;nbsp;different&amp;nbsp;ranges&amp;nbsp;are&amp;nbsp;not&amp;nbsp;allowed&amp;nbsp;to&amp;nbsp;overlap.&amp;nbsp;They&amp;nbsp;have&amp;nbsp;to&amp;nbsp;be&amp;nbsp;disjunct.&amp;nbsp;There&amp;nbsp;might&amp;nbsp;be&amp;nbsp;time&amp;nbsp;between&#xD;&#xA;the&amp;nbsp;end&amp;nbsp;of&amp;nbsp;one&amp;nbsp;interval&amp;nbsp;and&amp;nbsp;the&amp;nbsp;beginning&amp;nbsp;of&amp;nbsp;the&amp;nbsp;next. It is not allowed&#xD;&#xA;to change ranges or shift measurements between subsequent ranges to readjust the range after measurements have been taken.&#xD;&#xA;Ranges can be used to differentiate the warm-up-phase from the measurement phase as well as to&amp;nbsp;implement sliding&#xD;&#xA;means."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="MeasurementRange"
+        eSuperTypes="#//ExperimentData/Propertyable">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="The&amp;nbsp;collected&amp;nbsp;data&amp;nbsp;can&amp;nbsp;be&amp;nbsp;split&amp;nbsp;into&amp;nbsp;several&amp;nbsp;measurement&amp;nbsp;ranges.&amp;nbsp;A&amp;nbsp;range&amp;nbsp;is&amp;nbsp;specified&amp;nbsp;as&amp;nbsp;time&amp;nbsp;interval&amp;nbsp;and&amp;nbsp;all&amp;nbsp;measurements&amp;nbsp;falling&amp;nbsp;into&amp;nbsp;a&amp;nbsp;range's&amp;nbsp;interval&amp;nbsp;belong&amp;nbsp;to&amp;nbsp;that&amp;nbsp;range.&amp;nbsp;And&amp;nbsp;only&amp;nbsp;these&amp;nbsp;measurements.&amp;nbsp;The&amp;nbsp;intervals&amp;nbsp;of&amp;nbsp;different&amp;nbsp;ranges&amp;nbsp;are&amp;nbsp;not&amp;nbsp;allowed&amp;nbsp;to&amp;nbsp;overlap.&amp;nbsp;They&amp;nbsp;have&amp;nbsp;to&amp;nbsp;be&amp;nbsp;disjunct.&amp;nbsp;There&amp;nbsp;might&amp;nbsp;be&amp;nbsp;time&amp;nbsp;between&#xD;&#xA;the&amp;nbsp;end&amp;nbsp;of&amp;nbsp;one&amp;nbsp;interval&amp;nbsp;and&amp;nbsp;the&amp;nbsp;beginning&amp;nbsp;of&amp;nbsp;the&amp;nbsp;next. It is not allowed&#xD;&#xA;to change ranges or shift measurements between subsequent ranges to readjust the range after measurements have been taken.&#xD;&#xA;Ranges can be used to differentiate the warm-up-phase from the measurement phase as well as to&amp;nbsp;implement sliding&#xD;&#xA;means."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rawMeasurements" ordered="false"
-          eType="#//ExperimentData/RawMeasurements" containment="true" eOpposite="#//ExperimentData/RawMeasurements/measurementRange"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measurement" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/Measurement" eOpposite="#//ExperimentData/Measurement/measurementRanges"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endTime" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSDurationMeasure">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Time passed since the start of the measuring. It refers to the right end of the time interval for which the measurements are captured in this range.&#xD;&#xA;&#xD;&#xA;For example, in a simulation environment this would mean simulation time passed since the start of the simulation. In a real world environment this would be the real time passed after the measurement has been started."/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="rawMeasurements"
+          ordered="false"
+          eType="#//ExperimentData/RawMeasurements"
+          containment="true"
+          eOpposite="#//ExperimentData/RawMeasurements/measurementRange"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measurement"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/Measurement"
+          eOpposite="#//ExperimentData/Measurement/measurementRanges"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="endTime"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSDurationMeasure">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="Time passed since the start of the measuring. It refers to the right end of the time interval for which the measurements are captured in this range.&#xD;&#xA;&#xD;&#xA;For example, in a simulation environment this would mean simulation time passed since the start of the simulation. In a real world environment this would be the real time passed after the measurement has been started."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSDurationMeasure">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Time passed since the start of the measuring. It refers to the left end of the time interval for which the measurements are captured in this range.&#xD;&#xA;&#xD;&#xA;For example, in a simulation environment this would mean simulation time passed since the start of the simulation. In a real world environment this would be the real time passed after the measurement has been started."/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="startTime"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSDurationMeasure">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="Time passed since the start of the measuring. It refers to the left end of the time interval for which the measurements are captured in this range.&#xD;&#xA;&#xD;&#xA;For example, in a simulation environment this would mean simulation time passed since the start of the simulation. In a real world environment this would be the real time passed after the measurement has been started."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="aggregatedMeasurements"
-          ordered="false" upperBound="-1" eType="#//ExperimentData/AggregatedMeasurements"
-          containment="true" eOpposite="#//ExperimentData/AggregatedMeasurements/measurementRange"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="aggregatedMeasurements"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/AggregatedMeasurements"
+          containment="true"
+          eOpposite="#//ExperimentData/AggregatedMeasurements/measurementRange"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Propertyable" abstract="true">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="additionalInformation"
-          upperBound="-1" eType="#//ExperimentData/EStringtoEObjectMapEntry" containment="true"
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="Propertyable"
+        abstract="true">
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="additionalInformation"
+          upperBound="-1"
+          eType="#//ExperimentData/EStringtoEObjectMapEntry"
+          containment="true"
           resolveProxies="false"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="EStringtoEObjectMapEntry" instanceClassName="java.util.Map$Entry">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="EStringtoEObjectMapEntry"
+        instanceClassName="java.util.Map$Entry">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="key"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="value"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="RawMeasurements" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Raw measurements contains an orderered list of measurements for a sensor. For each measurement the time when the measurement as well as the measurement itself are stored. Hence, n measurements imply n event times. This means that  inheriting classes have to ensure the same number and ordering for additionally stored measurements."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="RawMeasurements"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Raw measurements contains an orderered list of measurements for a sensor. For each measurement the time when the measurement as well as the measurement itself are stored. Hence, n measurements imply n event times. This means that  inheriting classes have to ensure the same number and ordering for additionally stored measurements."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="dataSeries" ordered="false"
-          lowerBound="1" upperBound="-1" eType="#//ExperimentData/DataSeries" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="dataSeries"
+          ordered="false"
+          lowerBound="1"
+          upperBound="-1"
+          eType="#//ExperimentData/DataSeries"
+          containment="true"
           eOpposite="#//ExperimentData/DataSeries/rawMeasurements"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measurementRange" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/MeasurementRange" eOpposite="#//ExperimentData/MeasurementRange/rawMeasurements"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measurementRange"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/MeasurementRange"
+          eOpposite="#//ExperimentData/MeasurementRange/rawMeasurements"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DataSeries" abstract="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="&lt;p>&#xD;&#xA;    Used to store measurements for one dimension.&#xD;&#xA;&lt;/p>"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="DataSeries"
+        abstract="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="&lt;p>&#xD;&#xA;    Used to store measurements for one dimension.&#xD;&#xA;&lt;/p>"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="numericalStatistics"
-          ordered="false" eType="#//ExperimentData/NumericalNominalStatistics" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="numericalStatistics"
+          ordered="false"
+          eType="#//ExperimentData/NumericalNominalStatistics"
+          containment="true"
           eOpposite="#//ExperimentData/NumericalNominalStatistics/dataSeries"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="aggregatedMeasurements"
-          ordered="false" eType="#//ExperimentData/FixedWidthAggregatedMeasurements"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="aggregatedMeasurements"
+          ordered="false"
+          eType="#//ExperimentData/FixedWidthAggregatedMeasurements"
           eOpposite="#//ExperimentData/FixedWidthAggregatedMeasurements/dataSeries"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="valuesUuid" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="valuesUuid"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
           iD="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="textualStatistics" ordered="false"
-          eType="#//ExperimentData/TextualNominalStatistics" containment="true" eOpposite="#//ExperimentData/TextualNominalStatistics/dataSeries"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rawMeasurements" ordered="false"
-          eType="#//ExperimentData/RawMeasurements" eOpposite="#//ExperimentData/RawMeasurements/dataSeries"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="textualStatistics"
+          ordered="false"
+          eType="#//ExperimentData/TextualNominalStatistics"
+          containment="true"
+          eOpposite="#//ExperimentData/TextualNominalStatistics/dataSeries"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="rawMeasurements"
+          ordered="false"
+          eType="#//ExperimentData/RawMeasurements"
+          eOpposite="#//ExperimentData/RawMeasurements/dataSeries"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="NumericalNominalStatistics" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="!self.dataSeries.oclIsKindOf(IdentifierBasedMeasurements)"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="NumericalNominalStatistics"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="!self.dataSeries.oclIsKindOf(IdentifierBasedMeasurements)"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberMeasurements" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Number of measurements in the data series."/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="numberMeasurements"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="Number of measurements in the data series."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="numericalMassDistribution"
-          ordered="false" upperBound="-1" eType="#//ExperimentData/NumericalMassDistribution"
-          containment="true" eOpposite="#//ExperimentData/NumericalMassDistribution/numericalNominalStatistics"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="dataSeries" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/DataSeries" eOpposite="#//ExperimentData/DataSeries/numericalStatistics"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="numericalMassDistribution"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/NumericalMassDistribution"
+          containment="true"
+          eOpposite="#//ExperimentData/NumericalMassDistribution/numericalNominalStatistics"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="dataSeries"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/DataSeries"
+          eOpposite="#//ExperimentData/DataSeries/numericalStatistics"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EDataType" name="EJSMeasure" instanceClassName="javax.measure.Measure">
-      <eTypeParameters name="V"/>
-      <eTypeParameters name="Q">
-        <eBounds eClassifier="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//IJSQuantity"/>
+    <eClassifiers
+        xsi:type="ecore:EDataType"
+        name="EJSMeasure"
+        instanceClassName="javax.measure.Measure">
+      <eTypeParameters
+          name="V"/>
+      <eTypeParameters
+          name="Q">
+        <eBounds
+            eClassifier="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//IJSQuantity"/>
       </eTypeParameters>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="NumericalMassDistribution">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="numericalNominalStatistics"
-          ordered="false" lowerBound="1" eType="#//ExperimentData/NumericalNominalStatistics"
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="NumericalMassDistribution">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="frequency"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="value"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="numericalNominalStatistics"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/NumericalNominalStatistics"
           eOpposite="#//ExperimentData/NumericalNominalStatistics/numericalMassDistribution"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FixedWidthAggregatedMeasurements"
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="FixedWidthAggregatedMeasurements"
         eSuperTypes="#//ExperimentData/AggregatedMeasurements">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intervals" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/FixedIntervals" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="intervals"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/FixedIntervals"
+          containment="true"
           eOpposite="#//ExperimentData/FixedIntervals/aggregatedMeasurements"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="dataSeries" ordered="false"
-          lowerBound="1" upperBound="-1" eType="#//ExperimentData/DataSeries" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="dataSeries"
+          ordered="false"
+          lowerBound="1"
+          upperBound="-1"
+          eType="#//ExperimentData/DataSeries"
+          containment="true"
           eOpposite="#//ExperimentData/DataSeries/aggregatedMeasurements"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FixedIntervals" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Describes the different aggregation intervals in detail. Includes start and end of each interval as well as two special intervals to reflect outliers. Intervals are not allowed to contain no value, there has to be a default. The default value is also saved to disc. The upper bound can be calculated as follows: upperBound = lowerBound + width * numberOfIntervals. The lower bound belongs to the first regular interval whereas the upper bound is the first value which is associated with the upper outlier interval.&#xD;&#xA;&#xD;&#xA;The data structure is build up as follows for n=numberOfIntervals different requested measurement intervals:&#xD;&#xA;First interval 'lower outlier interval': All measurements in the interval (-\infty, lowerBound).&#xD;&#xA;Second to n-th interval 'regular interval i': All measurements in the interval [lowerBound+width*(i-1), lowerBound+width*i).&#xD;&#xA;n-th interval 'upper outlier interval': All measurements in the interval [lowerBound+width*n, \infty) = [upperBound+width*n, \infty).&#xD;&#xA;"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="FixedIntervals"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Describes the different aggregation intervals in detail. Includes start and end of each interval as well as two special intervals to reflect outliers. Intervals are not allowed to contain no value, there has to be a default. The default value is also saved to disc. The upper bound can be calculated as follows: upperBound = lowerBound + width * numberOfIntervals. The lower bound belongs to the first regular interval whereas the upper bound is the first value which is associated with the upper outlier interval.&#xD;&#xA;&#xD;&#xA;The data structure is build up as follows for n=numberOfIntervals different requested measurement intervals:&#xD;&#xA;First interval 'lower outlier interval': All measurements in the interval (-\infty, lowerBound).&#xD;&#xA;Second to n-th interval 'regular interval i': All measurements in the interval [lowerBound+width*(i-1), lowerBound+width*i).&#xD;&#xA;n-th interval 'upper outlier interval': All measurements in the interval [lowerBound+width*n, \infty) = [upperBound+width*n, \infty).&#xD;&#xA;"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerBound" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfIntervals" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="aggregatedMeasurements"
-          ordered="false" lowerBound="1" eType="#//ExperimentData/FixedWidthAggregatedMeasurements"
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="lowerBound"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="width"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="numberOfIntervals"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="aggregatedMeasurements"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/FixedWidthAggregatedMeasurements"
           eOpposite="#//ExperimentData/FixedWidthAggregatedMeasurements/intervals"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TextualNominalStatistics">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.dataSeries.oclIsKindOf(IdentifierBasedMeasurements)"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="TextualNominalStatistics">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="self.dataSeries.oclIsKindOf(IdentifierBasedMeasurements)"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberMeasurements" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="massDistribution" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/TextualMassDistribution" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="numberMeasurements"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="massDistribution"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/TextualMassDistribution"
+          containment="true"
           eOpposite="#//ExperimentData/TextualMassDistribution/textualNominalStatistics"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="dataSeries" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/DataSeries" eOpposite="#//ExperimentData/DataSeries/textualStatistics"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="dataSeries"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/DataSeries"
+          eOpposite="#//ExperimentData/DataSeries/textualStatistics"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TextualMassDistribution">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="identifier" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Identifier"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="textualNominalStatistics"
-          ordered="false" lowerBound="1" eType="#//ExperimentData/TextualNominalStatistics"
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="TextualMassDistribution">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="frequency"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="identifier"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Identifier"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="textualNominalStatistics"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/TextualNominalStatistics"
           eOpposite="#//ExperimentData/TextualNominalStatistics/massDistribution"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ExperimentGroup" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//ExperimentData/Propertyable">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="An experiment group contains all experiments which belong to a single analysis. An example for an experiment group is a scalability analysis or architectural alternative comparison including the corresponding set of experiments.&#xD;&#xA;&#xD;&#xA;Experiment groups can be either a manual or automatic analysis"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="ExperimentGroup"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//ExperimentData/Propertyable">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="An experiment group contains all experiments which belong to a single analysis. An example for an experiment group is a scalability analysis or architectural alternative comparison including the corresponding set of experiments.&#xD;&#xA;&#xD;&#xA;Experiment groups can be either a manual or automatic analysis"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="experimentSettings" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/ExperimentSetting" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="experimentSettings"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/ExperimentSetting"
+          containment="true"
           eOpposite="#//ExperimentData/ExperimentSetting/experimentGroup"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measuringTypes" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/MeasuringType" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measuringTypes"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/MeasuringType"
+          containment="true"
           eOpposite="#//ExperimentData/MeasuringType/experimentGroup"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="repository" ordered="false"
-          eType="#//Repository/Repository" transient="true" eOpposite="#//Repository/Repository/experimentGroups">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Repository in which this experiment group is stored."/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="purpose"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="repository"
+          ordered="false"
+          eType="#//Repository/Repository"
+          transient="true"
+          eOpposite="#//Repository/Repository/experimentGroups">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="Repository in which this experiment group is stored."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="reports" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/ExperimentGroupRun" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="reports"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/ExperimentGroupRun"
+          containment="true"
           eOpposite="#//ExperimentData/ExperimentGroupRun/experimentgroup"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measuringPointRepositories"
-          upperBound="-1" eType="#//measuringpoint/MeasuringPointRepository" containment="true"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measuringPointRepositories"
+          upperBound="-1"
+          eType="#//measuringpoint/MeasuringPointRepository"
+          containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ExperimentSetting" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//ExperimentData/Propertyable">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="An experiment setting belongs to an experiment group and consists of a fixed experimental setting, meaning all independent variables are fixed. This includes variables influencing the generation of the test data, for example the duration of a simulation run leading to the generation of the collected data (later stored in an experiment run). Such a set of collected data is stored as an experiment run. For example, an experiment setting allows repeating a single setting to study statistical significance and variance."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="ExperimentSetting"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//ExperimentData/Propertyable">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="An experiment setting belongs to an experiment group and consists of a fixed experimental setting, meaning all independent variables are fixed. This includes variables influencing the generation of the test data, for example the duration of a simulation run leading to the generation of the collected data (later stored in an experiment run). Such a set of collected data is stored as an experiment run. For example, an experiment setting allows repeating a single setting to study statistical significance and variance."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="experimentRuns" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/ExperimentRun" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="description"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="experimentRuns"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/ExperimentRun"
+          containment="true"
           eOpposite="#//ExperimentData/ExperimentRun/experimentSetting"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measuringTypes" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/MeasuringType" eOpposite="#//ExperimentData/MeasuringType/experimentSettings"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="experimentGroup" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/ExperimentGroup" eOpposite="#//ExperimentData/ExperimentGroup/experimentSettings"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measuringTypes"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/MeasuringType"
+          eOpposite="#//ExperimentData/MeasuringType/experimentSettings"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="experimentGroup"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/ExperimentGroup"
+          eOpposite="#//ExperimentData/ExperimentGroup/experimentSettings"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ExperimentRun" eSuperTypes="#//ExperimentData/Run">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Experiment runs contain the collected data (results) for each replication of an experiment. The data is collected for each sensor declared in the experiment setting. There is one instance of collected data for each declared sensor.&#xD;&#xA;&#xD;&#xA;The time when the experiment was started and how long it took are stored as attributes. The end of the experiment run can be calculated by: endTime = startTime + duration.&#xD;&#xA;self.experimentSetting.measure->size()=measurements->size() and &#xD;&#xA;self.experimentSetting.measure->forAll(s|self.measurements->collect(measure)->select(s2|s=s2)->size()=1)"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="ExperimentRun"
+        eSuperTypes="#//ExperimentData/Run">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Experiment runs contain the collected data (results) for each replication of an experiment. The data is collected for each sensor declared in the experiment setting. There is one instance of collected data for each declared sensor.&#xD;&#xA;&#xD;&#xA;The time when the experiment was started and how long it took are stored as attributes. The end of the experiment run can be calculated by: endTime = startTime + duration.&#xD;&#xA;self.experimentSetting.measure->size()=measurements->size() and &#xD;&#xA;self.experimentSetting.measure->forAll(s|self.measurements->collect(measure)->select(s2|s=s2)->size()=1)"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="experimentSetting" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/ExperimentSetting" eOpposite="#//ExperimentData/ExperimentSetting/experimentRuns"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="experimentSetting"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/ExperimentSetting"
+          eOpposite="#//ExperimentData/ExperimentSetting/experimentRuns"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Measurement" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//ExperimentData/Propertyable">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="There&amp;nbsp;is&amp;nbsp;exactly&amp;nbsp;one&amp;nbsp;instance&amp;nbsp;of&amp;nbsp;this&amp;nbsp;class&amp;nbsp;for&amp;nbsp;each&amp;nbsp;combination&amp;nbsp;of&amp;nbsp;experiment&amp;nbsp;run&amp;nbsp;and&amp;nbsp;corresponding&amp;nbsp;measure&amp;nbsp;declaration.&#xD;&#xA;It indicates that the experiment run contains measurements for the linked Edp2Measure."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="Measurement"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//ExperimentData/Propertyable">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="There&amp;nbsp;is&amp;nbsp;exactly&amp;nbsp;one&amp;nbsp;instance&amp;nbsp;of&amp;nbsp;this&amp;nbsp;class&amp;nbsp;for&amp;nbsp;each&amp;nbsp;combination&amp;nbsp;of&amp;nbsp;experiment&amp;nbsp;run&amp;nbsp;and&amp;nbsp;corresponding&amp;nbsp;measure&amp;nbsp;declaration.&#xD;&#xA;It indicates that the experiment run contains measurements for the linked Edp2Measure."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measuringType" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/MeasuringType"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measurementRanges" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/MeasurementRange" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measuringType"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/MeasuringType"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measurementRanges"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/MeasurementRange"
+          containment="true"
           eOpposite="#//ExperimentData/MeasurementRange/measurement"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="run" lowerBound="1" eType="#//ExperimentData/Run"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="run"
+          lowerBound="1"
+          eType="#//ExperimentData/Run"
           eOpposite="#//ExperimentData/Run/measurement"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="MeasuringType" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Describes&amp;nbsp;and&amp;nbsp;specifies&amp;nbsp;the&amp;nbsp;measure&amp;nbsp;used.&amp;nbsp;Needs&amp;nbsp;to&amp;nbsp;be&amp;nbsp;subclassed&amp;nbsp;to&amp;nbsp;create&amp;nbsp;concrete&amp;nbsp;Measures&amp;nbsp;which&amp;nbsp;can&amp;nbsp;handle&amp;nbsp;specific&amp;nbsp;data.&amp;nbsp;Measures&amp;nbsp;are&amp;nbsp;attached&amp;nbsp;to&amp;nbsp;ExperimentGroup&amp;nbsp;and&amp;nbsp;referenced&amp;nbsp;from&amp;nbsp;ExperimentSetting&amp;nbsp;to&amp;nbsp;allow&amp;nbsp;modeling&amp;nbsp;that&amp;nbsp;the&amp;nbsp;same&amp;nbsp;Measure&amp;nbsp;is&amp;nbsp;used&amp;nbsp;throughout&amp;nbsp;several&amp;nbsp;experiment&amp;nbsp;settings.&#xD;&#xA;An Edp2Measure can have one or more dimensions (see also the attribute metric).&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;Characterizes&amp;nbsp;the&amp;nbsp;reading&amp;nbsp;point&amp;nbsp;how&amp;nbsp;the&amp;nbsp;measurements&amp;nbsp;are&amp;nbsp;collected.&amp;nbsp;The&amp;nbsp;Characerization&amp;nbsp;is&amp;nbsp;propertyable&amp;nbsp;if&amp;nbsp;additional&amp;nbsp;context-specific&amp;nbsp;information&amp;nbsp;should&amp;nbsp;be&amp;nbsp;stored&amp;nbsp;for&amp;nbsp;the&amp;nbsp;sensor.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;For&amp;nbsp;example&amp;nbsp;measuring&amp;nbsp;the&amp;nbsp;response&amp;nbsp;time&amp;nbsp;of&amp;nbsp;a&amp;nbsp;request&amp;nbsp;to&amp;nbsp;a&amp;nbsp;system&amp;nbsp;in&amp;nbsp;milliseconds&amp;nbsp;could&amp;nbsp;result&amp;nbsp;in&amp;nbsp;the&amp;nbsp;following&amp;nbsp;values&amp;nbsp;of&amp;nbsp;the&amp;nbsp;attributes:&amp;nbsp;metric='Response&amp;nbsp;Time',&amp;nbsp;measuredObject='System&amp;nbsp;External&amp;nbsp;Requests',&amp;nbsp;and&amp;nbsp;unitOfMeasurements='ms'.&amp;nbsp;Another&amp;nbsp;example&amp;nbsp;is&amp;nbsp;the&amp;nbsp;number&amp;nbsp;of&amp;nbsp;lines&amp;nbsp;of&amp;nbsp;code&amp;nbsp;of&amp;nbsp;the&amp;nbsp;class&amp;nbsp;java.lang.System:&amp;nbsp;metric='LOC',&amp;nbsp;measuredObject='Class&amp;nbsp;java.lang.System',&amp;nbsp;and&amp;nbsp;unitOfMeasurement='Positive&amp;nbsp;Integer'."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="MeasuringType"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Describes&amp;nbsp;and&amp;nbsp;specifies&amp;nbsp;the&amp;nbsp;measure&amp;nbsp;used.&amp;nbsp;Needs&amp;nbsp;to&amp;nbsp;be&amp;nbsp;subclassed&amp;nbsp;to&amp;nbsp;create&amp;nbsp;concrete&amp;nbsp;Measures&amp;nbsp;which&amp;nbsp;can&amp;nbsp;handle&amp;nbsp;specific&amp;nbsp;data.&amp;nbsp;Measures&amp;nbsp;are&amp;nbsp;attached&amp;nbsp;to&amp;nbsp;ExperimentGroup&amp;nbsp;and&amp;nbsp;referenced&amp;nbsp;from&amp;nbsp;ExperimentSetting&amp;nbsp;to&amp;nbsp;allow&amp;nbsp;modeling&amp;nbsp;that&amp;nbsp;the&amp;nbsp;same&amp;nbsp;Measure&amp;nbsp;is&amp;nbsp;used&amp;nbsp;throughout&amp;nbsp;several&amp;nbsp;experiment&amp;nbsp;settings.&#xD;&#xA;An Edp2Measure can have one or more dimensions (see also the attribute metric).&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;Characterizes&amp;nbsp;the&amp;nbsp;reading&amp;nbsp;point&amp;nbsp;how&amp;nbsp;the&amp;nbsp;measurements&amp;nbsp;are&amp;nbsp;collected.&amp;nbsp;The&amp;nbsp;Characerization&amp;nbsp;is&amp;nbsp;propertyable&amp;nbsp;if&amp;nbsp;additional&amp;nbsp;context-specific&amp;nbsp;information&amp;nbsp;should&amp;nbsp;be&amp;nbsp;stored&amp;nbsp;for&amp;nbsp;the&amp;nbsp;sensor.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;For&amp;nbsp;example&amp;nbsp;measuring&amp;nbsp;the&amp;nbsp;response&amp;nbsp;time&amp;nbsp;of&amp;nbsp;a&amp;nbsp;request&amp;nbsp;to&amp;nbsp;a&amp;nbsp;system&amp;nbsp;in&amp;nbsp;milliseconds&amp;nbsp;could&amp;nbsp;result&amp;nbsp;in&amp;nbsp;the&amp;nbsp;following&amp;nbsp;values&amp;nbsp;of&amp;nbsp;the&amp;nbsp;attributes:&amp;nbsp;metric='Response&amp;nbsp;Time',&amp;nbsp;measuredObject='System&amp;nbsp;External&amp;nbsp;Requests',&amp;nbsp;and&amp;nbsp;unitOfMeasurements='ms'.&amp;nbsp;Another&amp;nbsp;example&amp;nbsp;is&amp;nbsp;the&amp;nbsp;number&amp;nbsp;of&amp;nbsp;lines&amp;nbsp;of&amp;nbsp;code&amp;nbsp;of&amp;nbsp;the&amp;nbsp;class&amp;nbsp;java.lang.System:&amp;nbsp;metric='LOC',&amp;nbsp;measuredObject='Class&amp;nbsp;java.lang.System',&amp;nbsp;and&amp;nbsp;unitOfMeasurement='Positive&amp;nbsp;Integer'."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="experimentGroup" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/ExperimentGroup" eOpposite="#//ExperimentData/ExperimentGroup/measuringTypes"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="experimentSettings" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/ExperimentSetting" eOpposite="#//ExperimentData/ExperimentSetting/measuringTypes"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="metric" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricDescription"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measuringPoint" lowerBound="1"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="experimentGroup"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/ExperimentGroup"
+          eOpposite="#//ExperimentData/ExperimentGroup/measuringTypes"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="experimentSettings"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/ExperimentSetting"
+          eOpposite="#//ExperimentData/ExperimentSetting/measuringTypes"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="metric"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//MetricDescription"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measuringPoint"
+          lowerBound="1"
           eType="#//measuringpoint/MeasuringPoint"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EDataType" name="EJSDurationMeasure" instanceClassName="javax.measure.Measure"/>
-    <eClassifiers xsi:type="ecore:EClass" name="AggregationStatistics" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="distinctValuesBeforeAggregation"
-          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The number of distinct data values before aggregation.&#xD;&#xA;"/>
+    <eClassifiers
+        xsi:type="ecore:EDataType"
+        name="EJSDurationMeasure"
+        instanceClassName="javax.measure.Measure"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="AggregationStatistics"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="distinctValuesBeforeAggregation"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="The number of distinct data values before aggregation.&#xD;&#xA;"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="distinctValuesAfterAggregation"
-          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The number of distinct data values after aggregation.&#xD;&#xA;&#xD;&#xA;For example if measurements were aggregated to three different groups the number is three."/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="distinctValuesAfterAggregation"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="The number of distinct data values after aggregation.&#xD;&#xA;&#xD;&#xA;For example if measurements were aggregated to three different groups the number is three."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="aggregatedMeasurements"
-          ordered="false" lowerBound="1" eType="#//ExperimentData/AggregatedMeasurements"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="aggregatedMeasurements"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/AggregatedMeasurements"
           eOpposite="#//ExperimentData/AggregatedMeasurements/aggregationStatistics"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DoubleBinaryMeasurements" eSuperTypes="#//ExperimentData/DataSeries">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This class is responsible for double measurements. These are stored in IEEE standardized binary format. All values are stored in the same unit. The file containing the actual measurements is constructed from the uuid of this class (which it has because it is Identifiable)."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="DoubleBinaryMeasurements"
+        eSuperTypes="#//ExperimentData/DataSeries">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="This class is responsible for double measurements. These are stored in IEEE standardized binary format. All values are stored in the same unit. The file containing the actual measurements is constructed from the uuid of this class (which it has because it is Identifiable)."/>
       </eAnnotations>
-      <eTypeParameters name="Q">
-        <eBounds eClassifier="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//IJSQuantity"/>
+      <eTypeParameters
+          name="Q">
+        <eBounds
+            eClassifier="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//IJSQuantity"/>
       </eTypeParameters>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="storageUnit" ordered="false"
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="storageUnit"
+          ordered="false"
           lowerBound="1">
-        <eGenericType eClassifier="ecore:EDataType ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//EJSUnit">
-          <eTypeArguments eTypeParameter="#//ExperimentData/DoubleBinaryMeasurements/Q"/>
+        <eGenericType
+            eClassifier="ecore:EDataType ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//EJSUnit">
+          <eTypeArguments
+              eTypeParameter="#//ExperimentData/DoubleBinaryMeasurements/Q"/>
         </eGenericType>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="NumericalIntervalStatistics" eSuperTypes="#//ExperimentData/NumericalOrdinalStatistics">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="arithmethicMean" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="variance" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="&lt;p>&#xD;&#xA;    Please note that the variance is a dimensionless value. Use Dimensionless.UNIT as unit for the measure.&#xD;&#xA;&lt;/p>"/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="standardDeviation" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="&lt;p>&#xD;&#xA;    Please note that the standard deviation is a dimensionless value. Use Dimensionless.UNIT as unit for the measure.&#xD;&#xA;&lt;/p>"/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="sum" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="NumericalOrdinalStatistics" eSuperTypes="#//ExperimentData/NumericalNominalStatistics">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximum" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="median" ordered="false"
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="NumericalIntervalStatistics"
+        eSuperTypes="#//ExperimentData/NumericalOrdinalStatistics">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="arithmethicMean"
+          ordered="false"
+          lowerBound="1"
           eType="#//ExperimentData/EJSMeasure"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="percentiles" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/NumericalPercentile" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="variance"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="&lt;p>&#xD;&#xA;    Please note that the variance is a dimensionless value. Use Dimensionless.UNIT as unit for the measure.&#xD;&#xA;&lt;/p>"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="standardDeviation"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="&lt;p>&#xD;&#xA;    Please note that the standard deviation is a dimensionless value. Use Dimensionless.UNIT as unit for the measure.&#xD;&#xA;&lt;/p>"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="sum"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure"/>
+    </eClassifiers>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="NumericalOrdinalStatistics"
+        eSuperTypes="#//ExperimentData/NumericalNominalStatistics">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="minimum"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="maximum"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="median"
+          ordered="false"
+          eType="#//ExperimentData/EJSMeasure"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="percentiles"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/NumericalPercentile"
+          containment="true"
           eOpposite="#//ExperimentData/NumericalPercentile/ordinalStatistics"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="NumericalPercentile" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentile" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ordinalStatistics" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/NumericalOrdinalStatistics" eOpposite="#//ExperimentData/NumericalOrdinalStatistics/percentiles"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="NumericalPercentile"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="percentile"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="value"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="ordinalStatistics"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/NumericalOrdinalStatistics"
+          eOpposite="#//ExperimentData/NumericalOrdinalStatistics/percentiles"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="JSXmlMeasurements" eSuperTypes="#//ExperimentData/DataSeries">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Stores the JScience types for which no fast background storage facility is available."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="JSXmlMeasurements"
+        eSuperTypes="#//ExperimentData/DataSeries">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Stores the JScience types for which no fast background storage facility is available."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LongBinaryMeasurements" eSuperTypes="#//ExperimentData/DataSeries">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This class is responsible for long measurements. These are stored in IEEE standardized binary format. All values are stored in the same unit. The actual measurements are stored outside the EMF model, see {@link de.uka.ipd.sdq.sensorframework.storage.Daofactory}."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="LongBinaryMeasurements"
+        eSuperTypes="#//ExperimentData/DataSeries">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="This class is responsible for long measurements. These are stored in IEEE standardized binary format. All values are stored in the same unit. The actual measurements are stored outside the EMF model, see {@link de.uka.ipd.sdq.sensorframework.storage.Daofactory}."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="storageUnit" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//EJSUnit"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="storageUnit"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//EJSUnit"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IdentifierBasedMeasurements" eSuperTypes="#//ExperimentData/DataSeries"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NumericalRatioStatistics" eSuperTypes="#//ExperimentData/NumericalIntervalStatistics">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="coefficientOfVariation"
-          ordered="false" lowerBound="1" eType="#//ExperimentData/EJSMeasure">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="&lt;p>&#xD;&#xA;    Please note that the coefficient of variation is a dimensionless value. Use Dimensionless.UNIT as unit for the measure.&#xD;&#xA;&lt;/p>"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="IdentifierBasedMeasurements"
+        eSuperTypes="#//ExperimentData/DataSeries"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="NumericalRatioStatistics"
+        eSuperTypes="#//ExperimentData/NumericalIntervalStatistics">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="coefficientOfVariation"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="&lt;p>&#xD;&#xA;    Please note that the coefficient of variation is a dimensionless value. Use Dimensionless.UNIT as unit for the measure.&#xD;&#xA;&lt;/p>"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="geometricMean" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="harmonicMean" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSMeasure"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="geometricMean"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="harmonicMean"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSMeasure"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IJSDuration" instanceClassName="javax.measure.quantity.Duration"
-        abstract="true" interface="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="EComparable" instanceClassName="java.lang.Comparable"
-        abstract="true" interface="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="TextualOrdinalStatistics" eSuperTypes="#//ExperimentData/TextualNominalStatistics">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="minimum" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Identifier"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="maximum" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Identifier"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="median" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Identifier"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="IJSDuration"
+        instanceClassName="javax.measure.quantity.Duration"
+        abstract="true"
+        interface="true"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="EComparable"
+        instanceClassName="java.lang.Comparable"
+        abstract="true"
+        interface="true"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="TextualOrdinalStatistics"
+        eSuperTypes="#//ExperimentData/TextualNominalStatistics">
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="minimum"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Identifier"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="maximum"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Identifier"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="median"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Identifier"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Run" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//ExperimentData/Propertyable">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" ordered="false"
-          lowerBound="1" eType="#//ExperimentData/EJSDurationMeasure">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Length of the duration in milli-seconds."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="Run"
+        abstract="true"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//ExperimentData/Propertyable">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="duration"
+          ordered="false"
+          lowerBound="1"
+          eType="#//ExperimentData/EJSDurationMeasure">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="Length of the duration in milli-seconds."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Instant at which the experiment run is started."/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="startTime"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/GenModel">
+          <details
+              key="documentation"
+              value="Instant at which the experiment run is started."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measurement" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/Measurement" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measurement"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/Measurement"
+          containment="true"
           eOpposite="#//ExperimentData/Measurement/run"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ExperimentGroupRun" eSuperTypes="#//ExperimentData/Run">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="experimentgroup" lowerBound="1"
-          eType="#//ExperimentData/ExperimentGroup" eOpposite="#//ExperimentData/ExperimentGroup/reports"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="ExperimentGroupRun"
+        eSuperTypes="#//ExperimentData/Run">
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="experimentgroup"
+          lowerBound="1"
+          eType="#//ExperimentData/ExperimentGroup"
+          eOpposite="#//ExperimentData/ExperimentGroup/reports"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="Repository" nsURI="http://palladiosimulator.org/EDP2/Repository/1.0"
+  <eSubpackages
+      name="Repository"
+      nsURI="http://palladiosimulator.org/EDP2/Repository/1.0"
       nsPrefix="org.palladiosimulator.edp2.models">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="&lt;p>&#xD;&#xA;    Contains&amp;nbsp;all&amp;nbsp;elements&amp;nbsp;to&amp;nbsp;handle&amp;nbsp;repositories.&amp;nbsp;Repositories&amp;nbsp;are&amp;nbsp;responsible&amp;nbsp;to&amp;nbsp;load/store&amp;nbsp;experiment&amp;nbsp;data.&#xD;&#xA;&lt;/p>"/>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="&lt;p>&#xD;&#xA;    Contains&amp;nbsp;all&amp;nbsp;elements&amp;nbsp;to&amp;nbsp;handle&amp;nbsp;repositories.&amp;nbsp;Repositories&amp;nbsp;are&amp;nbsp;responsible&amp;nbsp;to&amp;nbsp;load/store&amp;nbsp;experiment&amp;nbsp;data.&#xD;&#xA;&lt;/p>"/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="LocalMemoryRepository" eSuperTypes="#//Repository/Repository">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Repository&amp;nbsp;which&amp;nbsp;provides&amp;nbsp;access&amp;nbsp;to&amp;nbsp;data&amp;nbsp;stored&amp;nbsp;in&amp;nbsp;local&amp;nbsp;memory (RAM)."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="LocalMemoryRepository"
+        eSuperTypes="#//Repository/Repository">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Repository&amp;nbsp;which&amp;nbsp;provides&amp;nbsp;access&amp;nbsp;to&amp;nbsp;data&amp;nbsp;stored&amp;nbsp;in&amp;nbsp;local&amp;nbsp;memory (RAM)."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="domain" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="domain"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="RemoteCdoRepository" eSuperTypes="#//Repository/Repository">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Provides access to data stored in a remote location on a CDO server."/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="Repositories">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Contains&amp;nbsp;a&amp;nbsp;list&amp;nbsp;of&amp;nbsp;available&amp;nbsp;repositories.&amp;nbsp;Can&amp;nbsp;be&amp;nbsp;used&amp;nbsp;to&amp;nbsp;load/store&amp;nbsp;the&amp;nbsp;list&amp;nbsp;of&amp;nbsp;available&amp;nbsp;repositories.&#xD;&#xA;Also provides the advantage that links between the different available repositories at runtime can be resolved. E.g. this&#xD;&#xA;allows reusing metric definitions from one repository in another one."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Repositories">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Contains&amp;nbsp;a&amp;nbsp;list&amp;nbsp;of&amp;nbsp;available&amp;nbsp;repositories.&amp;nbsp;Can&amp;nbsp;be&amp;nbsp;used&amp;nbsp;to&amp;nbsp;load/store&amp;nbsp;the&amp;nbsp;list&amp;nbsp;of&amp;nbsp;available&amp;nbsp;repositories.&#xD;&#xA;Also provides the advantage that links between the different available repositories at runtime can be resolved. E.g. this&#xD;&#xA;allows reusing metric definitions from one repository in another one."/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="availableRepositories"
-          ordered="false" upperBound="-1" eType="#//Repository/Repository" containment="true"
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="availableRepositories"
+          ordered="false"
+          upperBound="-1"
+          eType="#//Repository/Repository"
+          containment="true"
           eOpposite="#//Repository/Repository/repositories"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="commonResourceSet" ordered="false"
-          lowerBound="1" eType="#//Repository/IResourceSet" transient="true"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="commonResourceSet"
+          ordered="false"
+          lowerBound="1"
+          eType="#//Repository/IResourceSet"
+          transient="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IResourceSet" instanceClassName="org.eclipse.emf.ecore.resource.ResourceSet"
-        abstract="true" interface="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="MeasurementsDaoFactory" instanceClassName="org.palladiosimulator.edp2.dao.MeasurementsDaoFactory"
-        abstract="true" interface="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="MetaDao" instanceClassName="org.palladiosimulator.edp2.dao.MetaDao"
-        abstract="true" interface="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Repository" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//Repository/MetaDao">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="&lt;p>&#xD;&#xA;    Unit of containment/storage for descriptions (metric and aggregation function) and experiment groups. Depending on the&#xD;&#xA;    actual type of storage where the data is stored different subclasses of this class must be used to access the data&#xD;&#xA;    itself.&#xD;&#xA;&lt;/p>"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="IResourceSet"
+        instanceClassName="org.eclipse.emf.ecore.resource.ResourceSet"
+        abstract="true"
+        interface="true"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="MeasurementsDaoFactory"
+        instanceClassName="org.palladiosimulator.edp2.dao.MeasurementsDaoFactory"
+        abstract="true"
+        interface="true"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="MetaDao"
+        instanceClassName="org.palladiosimulator.edp2.dao.MetaDao"
+        abstract="true"
+        interface="true"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="Repository"
+        abstract="true"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier #//Repository/MetaDao">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="&lt;p>&#xD;&#xA;    Unit of containment/storage for descriptions (metric and aggregation function) and experiment groups. Depending on the&#xD;&#xA;    actual type of storage where the data is stored different subclasses of this class must be used to access the data&#xD;&#xA;    itself.&#xD;&#xA;&lt;/p>"/>
       </eAnnotations>
-      <eOperations name="resetExperimentGroups" ordered="false" lowerBound="1"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="repositories" ordered="false"
-          lowerBound="1" eType="#//Repository/Repositories" eOpposite="#//Repository/Repositories/availableRepositories"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="experimentGroups" ordered="false"
-          upperBound="-1" eType="#//ExperimentData/ExperimentGroup" transient="true"
+      <eOperations
+          name="resetExperimentGroups"
+          ordered="false"
+          lowerBound="1"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="repositories"
+          ordered="false"
+          lowerBound="1"
+          eType="#//Repository/Repositories"
+          eOpposite="#//Repository/Repositories/availableRepositories"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="experimentGroups"
+          ordered="false"
+          upperBound="-1"
+          eType="#//ExperimentData/ExperimentGroup"
+          transient="true"
           eOpposite="#//ExperimentData/ExperimentGroup/repository"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="readOnly" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="descriptions" ordered="false"
-          upperBound="-1" eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Description"
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="readOnly"
+          ordered="false"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="descriptions"
+          ordered="false"
+          upperBound="-1"
+          eType="ecore:EClass ../../org.palladiosimulator.metricspec/model/metricspec.ecore#//Description"
           transient="true"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="measuringpoint" nsURI="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0"
+  <eSubpackages
+      name="measuringpoint"
+      nsURI="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0"
       nsPrefix="org.palladiosimulator.edp2.models">
-    <eClassifiers xsi:type="ecore:EClass" name="MeasuringPoint" abstract="true">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measuringPointRepository"
-          lowerBound="1" eType="#//measuringpoint/MeasuringPointRepository" eOpposite="#//measuringpoint/MeasuringPointRepository/measuringPoints"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="stringRepresentation"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceURIRepresentation"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="StringMeasuringPoint" eSuperTypes="#//measuringpoint/MeasuringPoint">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="measuringPoint" lowerBound="1"
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="MeasuringPoint"
+        abstract="true">
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measuringPointRepository"
+          lowerBound="1"
+          eType="#//measuringpoint/MeasuringPointRepository"
+          eOpposite="#//measuringpoint/MeasuringPointRepository/measuringPoints"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="stringRepresentation"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="resourceURIRepresentation"
+          lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceURIMeasuringPoint" eSuperTypes="#//measuringpoint/StringMeasuringPoint">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceURI" lowerBound="1"
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="StringMeasuringPoint"
+        eSuperTypes="#//measuringpoint/MeasuringPoint">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="measuringPoint"
+          lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="MeasuringPointRepository" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="measuringPoints" upperBound="-1"
-          eType="#//measuringpoint/MeasuringPoint" containment="true" eOpposite="#//measuringpoint/MeasuringPoint/measuringPointRepository"/>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="ResourceURIMeasuringPoint"
+        eSuperTypes="#//measuringpoint/StringMeasuringPoint">
+      <eStructuralFeatures
+          xsi:type="ecore:EAttribute"
+          name="resourceURI"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="MeasuringPointRepository"
+        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="measuringPoints"
+          upperBound="-1"
+          eType="#//measuringpoint/MeasuringPoint"
+          containment="true"
+          eOpposite="#//measuringpoint/MeasuringPoint/measuringPointRepository"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

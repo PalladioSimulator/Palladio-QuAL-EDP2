@@ -1,2 +1,6 @@
 target/
 bin/
+src-gen/
+*.polyglot.*
+*.takari_issue_192
+*.tycho
