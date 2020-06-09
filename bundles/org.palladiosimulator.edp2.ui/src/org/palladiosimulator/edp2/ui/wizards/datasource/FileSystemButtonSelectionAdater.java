@@ -31,11 +31,10 @@ public class FileSystemButtonSelectionAdater extends SelectionAdapter implements
     @Override
     public void widgetSelected(SelectionEvent e) {
         DirectoryDialog directoryDialog = new DirectoryDialog(shell, SWT.OPEN | SWT.SINGLE);
-        directoryDialog.open();
-
-        String filterPath = directoryDialog.getFilterPath();
-        if (filterPath != null) {
-            text.setText(URI.createFileURI(filterPath).toString());
+        
+        var folderPath = directoryDialog.open();
+        if (folderPath != null) {
+            text.setText(URI.createFileURI(folderPath).toString());
         }
     }
 }
