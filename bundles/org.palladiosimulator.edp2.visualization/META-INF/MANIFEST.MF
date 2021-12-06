@@ -2,13 +2,13 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Visualization
 Bundle-SymbolicName: org.palladiosimulator.edp2.visualization;singleton:=true
-Bundle-Version: 5.0.0.qualifier
+Bundle-Version: 5.1.0.qualifier
 Bundle-Activator: org.palladiosimulator.edp2.visualization.Activator
-Require-Bundle: org.palladiosimulator.edp2;bundle-version="5.0.0",
+Require-Bundle: org.palladiosimulator.edp2;bundle-version="5.1.0",
  org.jscience;bundle-version="4.1.3",
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.0",
  org.eclipse.emf.databinding,
- org.palladiosimulator.edp2.datastream;bundle-version="5.0.0",
+ org.palladiosimulator.edp2.datastream;bundle-version="5.1.0",
  org.palladiosimulator.commons;bundle-version="1.0.0",
  org.apache.commons.lang;bundle-version="2.6.0",
  de.uka.ipd.sdq.dialogs;bundle-version="2.0.1",

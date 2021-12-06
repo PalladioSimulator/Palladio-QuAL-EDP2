@@ -2,12 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JFreeChart EDP2 Visualizations
 Bundle-SymbolicName: org.palladiosimulator.edp2.visualization.jfreechart;singleton:=true
-Bundle-Version: 5.0.0.qualifier
+Bundle-Version: 5.1.0.qualifier
 Bundle-Vendor: palladiosimulator.org
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.jfree.jfreechart;bundle-version="1.0.9",
- org.palladiosimulator.edp2;bundle-version="5.0.0",
- org.palladiosimulator.edp2.datastream;bundle-version="5.0.0",
+ org.palladiosimulator.edp2;bundle-version="5.1.0",
+ org.palladiosimulator.edp2.datastream;bundle-version="5.1.0",
  org.eclipse.ui;bundle-version="3.105.0",
  org.palladiosimulator.commons;bundle-version="1.0.0",
  org.palladiosimulator.metricspec;bundle-version="1.0.0",
@@ -19,9 +19,9 @@ Require-Bundle: org.jfree.jfreechart;bundle-version="1.0.9",
  org.apache.batik.ext.awt;bundle-version="1.6.0",
  org.apache.batik.svggen;bundle-version="1.6.0",
  org.palladiosimulator.measurementframework,
- org.palladiosimulator.edp2.util;bundle-version="5.0.0",
+ org.palladiosimulator.edp2.util;bundle-version="5.1.0",
  org.apache.commons.lang;bundle-version="2.6.0",
- org.palladiosimulator.edp2.visualization;bundle-version="5.0.0"
+ org.palladiosimulator.edp2.visualization;bundle-version="5.1.0"
 Export-Package:  org.palladiosimulator.edp2.visualization.jfreechart.editor,
  org.palladiosimulator.edp2.visualization.jfreechart.input,
  org.palladiosimulator.edp2.visualization.jfreechart.input.histogram,

@@ -2,16 +2,16 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Warmup Filter
 Bundle-SymbolicName: org.palladiosimulator.edp2.filter.warmup;singleton:=true
-Bundle-Version: 5.0.0.qualifier
+Bundle-Version: 5.1.0.qualifier
 Bundle-Vendor: %providerName
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.palladiosimulator.edp2.datastream,
  org.palladiosimulator.metricspec,
  org.palladiosimulator.measurementframework,
  org.eclipse.ui.workbench,
- org.palladiosimulator.edp2.util;bundle-version="5.0.0",
- org.palladiosimulator.edp2.visualization;bundle-version="5.0.0",
- org.palladiosimulator.edp2;bundle-version="5.0.0",
+ org.palladiosimulator.edp2.util;bundle-version="5.1.0",
+ org.palladiosimulator.edp2.visualization;bundle-version="5.1.0",
+ org.palladiosimulator.edp2;bundle-version="5.1.0",
  org.eclipse.jface,
  org.palladiosimulator.commons
 Bundle-ActivationPolicy: lazy
