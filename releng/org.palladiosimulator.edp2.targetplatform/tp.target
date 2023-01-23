@@ -44,7 +44,7 @@
 			<unit id="org.apache.batik.dom" version="1.14.0.v20210324-0332" />
 			<unit id="org.apache.batik.awt.util" version="1.14.0.v20210324-0332" />
 			<unit id="org.apache.batik.svggen" version="1.14.0.v20210324-0332" />
-			<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20211122181901/repository"/>
+			<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20221123021534/repository"/>
 		</location>
 	</locations>
 </target>
