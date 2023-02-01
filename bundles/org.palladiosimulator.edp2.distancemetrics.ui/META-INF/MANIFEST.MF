@@ -17,7 +17,7 @@ Require-Bundle: org.eclipse.ui,
  org.jscience,
  org.palladiosimulator.metricspec,
  org.eclipse.nebula.widgets.formattedtext
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Export-Package: org.palladiosimulator.edp2.distancemetrics.ui.extensions,
  org.palladiosimulator.edp2.distancemetrics.ui.extensions.properties

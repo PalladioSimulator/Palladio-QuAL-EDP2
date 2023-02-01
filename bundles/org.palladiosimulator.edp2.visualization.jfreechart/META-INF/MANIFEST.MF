@@ -4,7 +4,7 @@ Bundle-Name: JFreeChart EDP2 Visualizations
 Bundle-SymbolicName: org.palladiosimulator.edp2.visualization.jfreechart;singleton:=true
 Bundle-Version: 5.1.0.qualifier
 Bundle-Vendor: palladiosimulator.org
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.jfree.jfreechart;bundle-version="1.0.9",
  org.palladiosimulator.edp2;bundle-version="5.1.0",
  org.palladiosimulator.edp2.datastream;bundle-version="5.1.0",

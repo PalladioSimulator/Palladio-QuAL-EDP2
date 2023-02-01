@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: EDP User Interface Plug-in
 Bundle-SymbolicName: org.palladiosimulator.edp2.ui;singleton:=true
 Bundle-Version: 5.1.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.navigator,
  org.eclipse.core.runtime,

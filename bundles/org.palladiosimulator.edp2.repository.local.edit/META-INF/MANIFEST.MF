@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.edp2.local.provider.LocalrepositoryEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.palladiosimulator.edp2.local.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.edp2.repository.local;visibility:=reexport,
