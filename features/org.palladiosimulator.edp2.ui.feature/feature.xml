@@ -39,20 +39,16 @@
       <import plugin="org.palladiosimulator.edp2.visualization.jfreechart" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2.repository.local" version="5.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2" version="5.1.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui.views.properties.tabbed" version="3.5.0" match="greaterOrEqual"/>
       <import plugin="org.apache.commons.lang" version="2.6.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.dialogs" version="2.0.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.eclipse.emf.common.ui"/>
       <import plugin="org.eclipse.swt"/>
-      <import plugin="org.eclipse.ui" version="3.105.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.metricspec" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui.views.properties.tabbed" version="3.6.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.runtime" version="3.9.100" match="greaterOrEqual"/>
       <import plugin="org.apache.commons.collections15" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.apache.batik.dom" version="1.6.0" match="greaterOrEqual"/>
-      <import plugin="org.apache.batik.ext.awt" version="1.6.0" match="greaterOrEqual"/>
-      <import plugin="org.apache.batik.svggen" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.batik.dom"/>
+      <import plugin="org.apache.batik.awt.util"/>
+      <import plugin="org.apache.batik.svggen"/>
       <import plugin="org.palladiosimulator.branding"/>
    </requires>
 
