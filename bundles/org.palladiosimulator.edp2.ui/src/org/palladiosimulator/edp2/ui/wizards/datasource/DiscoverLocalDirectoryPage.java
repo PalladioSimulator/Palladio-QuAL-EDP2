@@ -6,6 +6,8 @@ import org.eclipse.core.databinding.AggregateValidationStatus;
 import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.observable.IObservable;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.IValueChangeListener;
 import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
 import org.eclipse.core.databinding.validation.IValidator;
@@ -13,7 +15,7 @@ import org.eclipse.core.databinding.validation.ValidationStatus;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.jface.databinding.swt.ISWTObservable;
-import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.databinding.wizard.WizardPageSupport;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.jface.fieldassist.FieldDecoration;
@@ -73,10 +75,10 @@ public class DiscoverLocalDirectoryPage extends WizardPage {
         // create this before binding the observables to enable displaying an
         // error when the wizard page is shown:
         WizardPageSupport.create(this, dbc);
-
-        dbc.bindValue(SWTObservables.observeText(locationText, SWT.Modify), EMFObservables.observeValue(ldRepo,
-                localPackage.Literals.LOCAL_DIRECTORY_REPOSITORY__URI), new UpdateValueStrategy()
-        .setAfterConvertValidator(new UriPointsToLocalDirectoryValidator("location", ldRepo)), null);
+		
+		final IObservableValue observeLocationText = WidgetProperties.text(SWT.Modify).observe(locationText);
+		
+        dbc.bindValue(observeLocationText, EMFObservables.observeValue(ldRepo, localPackage.Literals.LOCAL_DIRECTORY_REPOSITORY__URI), new UpdateValueStrategy().setAfterConvertValidator(new UriPointsToLocalDirectoryValidator("location", ldRepo)), null);
 
         final AggregateValidationStatus aggregateValidationStatus = new AggregateValidationStatus(
                 dbc.getValidationStatusProviders(), AggregateValidationStatus.MAX_SEVERITY);
