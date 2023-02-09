@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.palladiosimulator.edp2.models:ExperimentGroup xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metricspec="http://palladiosimulator.org/MetricSpec/1.0" xmlns:org.palladiosimulator.edp2.models="http://palladiosimulator.org/EDP2/ExperimentData/1.0" xmlns:org.palladiosimulator.edp2.models_1="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0" xmlns:pcmmeasuringpoint="http://palladiosimulator.org/PCM/MeasuringPoint/1.0" xmlns:simulizarmeasuringpoint="http://palladiosimulator.org/simulizar/measuringpoint" id="_Wdj_YKiKEe2Lkfj_a47UkA" purpose="MyRun">
+  <experimentSettings id="_WdlNgKiKEe2Lkfj_a47UkA" description="Default Variation" measuringTypes="_WeKcUKiKEe2Lkfj_a47UkA">
+    <experimentRuns id="_WdlNgaiKEe2Lkfj_a47UkA" duration="rO0ABXNyABpqYXZheC5tZWFzdXJlLk1lYXN1cmUkTG9uZwAAAAAAAAABAgACSgAGX3ZhbHVlTAAFX3VuaXR0ABlMamF2YXgvbWVhc3VyZS91bml0L1VuaXQ7eHIAFWphdmF4Lm1lYXN1cmUuTWVhc3VyZRLhH5KGpamaAgAAeHAAAAAAAAABc3NyABtqYXZheC5tZWFzdXJlLnVuaXQuQmFzZVVuaXQAAAAAAAAAAQIAAUwAB19zeW1ib2x0ABJMamF2YS9sYW5nL1N0cmluZzt4cgAXamF2YXgubWVhc3VyZS51bml0LlVuaXTNyN4WeM1SZwIAAHhwdAABcw==" startTime="2023-02-09T15:59:28.472+0100">
+      <measurement id="_WeKcUaiKEe2Lkfj_a47UkA" measuringType="_WeKcUKiKEe2Lkfj_a47UkA">
+        <measurementRanges endTime="rO0ABXNyABpqYXZheC5tZWFzdXJlLk1lYXN1cmUkTG9uZwAAAAAAAAABAgACSgAGX3ZhbHVlTAAFX3VuaXR0ABlMamF2YXgvbWVhc3VyZS91bml0L1VuaXQ7eHIAFWphdmF4Lm1lYXN1cmUuTWVhc3VyZRLhH5KGpamaAgAAeHAAAAGGNrBLy3NyABtqYXZheC5tZWFzdXJlLnVuaXQuQmFzZVVuaXQAAAAAAAAAAQIAAUwAB19zeW1ib2x0ABJMamF2YS9sYW5nL1N0cmluZzt4cgAXamF2YXgubWVhc3VyZS51bml0LlVuaXTNyN4WeM1SZwIAAHhwdAABcw==" startTime="rO0ABXNyABpqYXZheC5tZWFzdXJlLk1lYXN1cmUkTG9uZwAAAAAAAAABAgACSgAGX3ZhbHVlTAAFX3VuaXR0ABlMamF2YXgvbWVhc3VyZS91bml0L1VuaXQ7eHIAFWphdmF4Lm1lYXN1cmUuTWVhc3VyZRLhH5KGpamaAgAAeHAAAAGGNrBKWHNyABtqYXZheC5tZWFzdXJlLnVuaXQuQmFzZVVuaXQAAAAAAAAAAQIAAUwAB19zeW1ib2x0ABJMamF2YS9sYW5nL1N0cmluZzt4cgAXamF2YXgubWVhc3VyZS51bml0LlVuaXTNyN4WeM1SZwIAAHhwdAABcw==">
+          <rawMeasurements id="_WeLDYKiKEe2Lkfj_a47UkA">
+            <dataSeries xsi:type="org.palladiosimulator.edp2.models:DoubleBinaryMeasurements" valuesUuid="_WeMRgKiKEe2Lkfj_a47UkA" storageUnit="ACED00057372001B6A617661782E6D6561737572652E756E69742E42617365556E697400000000000000010200014C00075F73796D626F6C7400124C6A6176612F6C616E672F537472696E673B787200176A617661782E6D6561737572652E756E69742E556E6974CDC8DE1678CD5267020000787074000173"/>
+            <dataSeries xsi:type="org.palladiosimulator.edp2.models:DoubleBinaryMeasurements" valuesUuid="_WeMRgaiKEe2Lkfj_a47UkA" storageUnit="ACED00057372001B6A617661782E6D6561737572652E756E69742E42617365556E697400000000000000010200014C00075F73796D626F6C7400124C6A6176612F6C616E672F537472696E673B787200176A617661782E6D6561737572652E756E69742E556E6974CDC8DE1678CD5267020000787074000173"/>
+          </rawMeasurements>
+        </measurementRanges>
+      </measurement>
+    </experimentRuns>
+  </experimentSettings>
+  <measuringTypes id="_WeKcUKiKEe2Lkfj_a47UkA" experimentSettings="_WdlNgKiKEe2Lkfj_a47UkA" measuringPoint="//@measuringPointRepositories.0/@measuringPoints.0">
+    <metric xsi:type="metricspec:MetricSetDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_mZb3MdoLEeO-WvSDaR6unQ"/>
+  </measuringTypes>
+  <measuringPointRepositories id="_3a_GIMltEeSsG6YHnSxiuA">
+    <measuringPoints xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" stringRepresentation="Usage Scenario: overloadUsageScenario" resourceURIRepresentation="platform:/resource/dependent_scaling/overload.usagemodel#_YtqF4AEqEeS7FKokKTKFow">
+      <usageScenario href="../overload.usagemodel#_YtqF4AEqEeS7FKokKTKFow"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:EntryLevelSystemCallMeasuringPoint" stringRepresentation="SystemCall aName to adpativeLoadBalancerSystem->Provided_IApplicationServer->processRequest [_cYRWcAEqEeS7FKokKTKFow]" resourceURIRepresentation="platform:/resource/dependent_scaling/overload.usagemodel#_cYRWcAEqEeS7FKokKTKFow">
+      <entryLevelSystemCall href="../overload.usagemodel#_cYRWcAEqEeS7FKokKTKFow"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ExternalCallActionMeasuringPoint" stringRepresentation="ExternalCall delegateAppServer1 from LB_Application to AC_Server1->processRequest [_8nlBcAEoEeS7FKokKTKFow]" resourceURIRepresentation="platform:/resource/dependent_scaling/loadbalancer.repository#_8nlBcAEoEeS7FKokKTKFow">
+      <externalCall href="../loadbalancer.repository#_8nlBcAEoEeS7FKokKTKFow"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ExternalCallActionMeasuringPoint" stringRepresentation="ExternalCall delegateAppServer2 from LB_Application to AC_Server2->processRequest [_-fSxAAEoEeS7FKokKTKFow]" resourceURIRepresentation="platform:/resource/dependent_scaling/loadbalancer.repository#_-fSxAAEoEeS7FKokKTKFow">
+      <externalCall href="../loadbalancer.repository#_-fSxAAEoEeS7FKokKTKFow"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ExternalCallActionMeasuringPoint" stringRepresentation="ExternalCall delegateAppServer3 from LB_Application to AC_Server3->processRequest [_uEMPoJANEeyrv9Eu1xYoSA]" resourceURIRepresentation="platform:/resource/dependent_scaling/loadbalancer.repository#_uEMPoJANEeyrv9Eu1xYoSA">
+      <externalCall href="../loadbalancer.repository#_uEMPoJANEeyrv9Eu1xYoSA"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ExternalCallActionMeasuringPoint" stringRepresentation="ExternalCall delegateWorkerServer1 from LB_Worker to Require_WorkingServer1->processWork [_6aQzYJDcEeyJkauEhStpaw]" resourceURIRepresentation="platform:/resource/dependent_scaling/loadbalancer.repository#_6aQzYJDcEeyJkauEhStpaw">
+      <externalCall href="../loadbalancer.repository#_6aQzYJDcEeyJkauEhStpaw"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ExternalCallActionMeasuringPoint" stringRepresentation="ExternalCall delegateWorkerServer2 from LB_Worker to Require_WorkingServer2->processWork [_73IaAJDcEeyJkauEhStpaw]" resourceURIRepresentation="platform:/resource/dependent_scaling/loadbalancer.repository#_73IaAJDcEeyJkauEhStpaw">
+      <externalCall href="../loadbalancer.repository#_73IaAJDcEeyJkauEhStpaw"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ExternalCallActionMeasuringPoint" stringRepresentation="ExternalCall CallWorker from ApplicationServer to RequiredWorkingServer->processWork [_DL5-QJDUEeytALe9lFoJIw]" resourceURIRepresentation="platform:/resource/dependent_scaling/loadbalancer.repository#_DL5-QJDUEeytALe9lFoJIw">
+      <externalCall href="../loadbalancer.repository#_DL5-QJDUEeytALe9lFoJIw"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="CPU [0] in LoadBalancer" resourceURIRepresentation="platform:/resource/dependent_scaling/iaas.resourceenvironment#_EKwpkAEqEeS7FKokKTKFow">
+      <activeResource href="../iaas.resourceenvironment#_EKwpkAEqEeS7FKokKTKFow"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="CPU [0] in ServerNode1" resourceURIRepresentation="platform:/resource/dependent_scaling/iaas.resourceenvironment#_GAVEEAEqEeS7FKokKTKFow">
+      <activeResource href="../iaas.resourceenvironment#_GAVEEAEqEeS7FKokKTKFow"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="CPU [0] in ServerNode2" resourceURIRepresentation="platform:/resource/dependent_scaling/iaas.resourceenvironment#_JPnqkAEqEeS7FKokKTKFow">
+      <activeResource href="../iaas.resourceenvironment#_JPnqkAEqEeS7FKokKTKFow"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="CPU [0] in ServerNode3" resourceURIRepresentation="platform:/resource/dependent_scaling/iaas.resourceenvironment#_x8nvMJAMEeyrv9Eu1xYoSA">
+      <activeResource href="../iaas.resourceenvironment#_x8nvMJAMEeyrv9Eu1xYoSA"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="CPU [0] in WorkerNode1" resourceURIRepresentation="platform:/resource/dependent_scaling/iaas.resourceenvironment#_I75KcJDVEeytALe9lFoJIw">
+      <activeResource href="../iaas.resourceenvironment#_I75KcJDVEeytALe9lFoJIw"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="CPU [0] in WorkerNode2" resourceURIRepresentation="platform:/resource/dependent_scaling/iaas.resourceenvironment#_OG0oIJDeEeyJkauEhStpaw">
+      <activeResource href="../iaas.resourceenvironment#_OG0oIJDeEeyJkauEhStpaw"/>
+    </measuringPoints>
+    <measuringPoints xsi:type="simulizarmeasuringpoint:ReconfigurationMeasuringPoint" stringRepresentation="reconf-server-in" resourceURIRepresentation="platform:/resource/org.palladiosimulator.simulizar.examples.loadbalancer/reconfigurations_active/rt_server_IN.qvto" measuringPoint="reconf-server-in" resourceURI="platform:/resource/org.palladiosimulator.simulizar.examples.loadbalancer/reconfigurations_active/rt_server_IN.qvto"/>
+    <measuringPoints xsi:type="simulizarmeasuringpoint:ReconfigurationMeasuringPoint" stringRepresentation="reconf-server-out" resourceURIRepresentation="platform:/resource/org.palladiosimulator.simulizar.examples.loadbalancer/reconfigurations_active/rt_server_OUT.qvto" measuringPoint="reconf-server-out" resourceURI="platform:/resource/org.palladiosimulator.simulizar.examples.loadbalancer/reconfigurations_active/rt_server_OUT.qvto"/>
+    <measuringPoints xsi:type="org.palladiosimulator.edp2.models_1:ResourceURIMeasuringPoint" stringRepresentation="Server1" resourceURIRepresentation="platform:/resource/org.palladiosimulator.simulizar.examples.loadbalancer/loadbalancer.repository#_8nlBcAEoEeS7FKokKTKFow" measuringPoint="Server1" resourceURI="platform:/resource/org.palladiosimulator.simulizar.examples.loadbalancer/loadbalancer.repository#_8nlBcAEoEeS7FKokKTKFow"/>
+    <measuringPoints xsi:type="org.palladiosimulator.edp2.models_1:ResourceURIMeasuringPoint" stringRepresentation="Server2" resourceURIRepresentation="platform:/resource/org.palladiosimulator.simulizar.examples.loadbalancer/loadbalancer.repository#_-fSxAAEoEeS7FKokKTKFow" measuringPoint="Server2" resourceURI="platform:/resource/org.palladiosimulator.simulizar.examples.loadbalancer/loadbalancer.repository#_-fSxAAEoEeS7FKokKTKFow"/>
+  </measuringPointRepositories>
+</org.palladiosimulator.edp2.models:ExperimentGroup>
