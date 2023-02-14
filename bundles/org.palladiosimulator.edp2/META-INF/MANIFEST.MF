@@ -36,8 +36,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.metricspec;bundle-version="1.0.0";visibility:=reexport,
  org.palladiosimulator.edp2.dao;bundle-version="5.1.0";visibility:=reexport,
  org.palladiosimulator.commons,
- org.palladiosimulator.edp2.mwe2;bundle-version="5.1.0";resolution:=optional,
- org.palladiosimulator.pcm.edp2.measuringpoint;bundle-version="5.1.0",
- org.palladiosimulator.simulizar.edp2.measuringpoint;bundle-version="5.1.0"
+ org.palladiosimulator.edp2.mwe2;bundle-version="5.1.0";resolution:=optional
 Bundle-Activator: org.palladiosimulator.edp2.EDP2Plugin
 Bundle-ActivationPolicy: lazy

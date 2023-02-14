@@ -8,8 +8,6 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.palladiosimulator.edp2.models.ExperimentData.ExperimentDataPackage;
 import org.palladiosimulator.edp2.models.ExperimentData.impl.ExperimentDataPackageImpl;
 import org.palladiosimulator.edp2.models.Repository.RepositoryPackage;
-import org.palladiosimulator.pcmmeasuringpoint.PcmmeasuringpointPackage;
-import simulizarmeasuringpoint.SimulizarmeasuringpointPackage;
 
 public class EmfModelXMIResourceFactoryImpl extends XMIResourceFactoryImpl {
     /** File extension for files containing an ExperimentGroup. */
@@ -42,10 +40,6 @@ public class EmfModelXMIResourceFactoryImpl extends XMIResourceFactoryImpl {
                 .put(EmfModelXMIResourceFactoryImpl.EDP2_DESCRIPTIONS_EXTENSION, resourceFactoryImpl);
         resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
                 .put(EmfModelXMIResourceFactoryImpl.EDP2_NOMINALMEASUREMENTS_EXTENSION, resourceFactoryImpl);
-
-        resourceSet.getPackageRegistry().put(PcmmeasuringpointPackage.eNS_URI, PcmmeasuringpointPackage.eINSTANCE);
-        resourceSet.getPackageRegistry().put(SimulizarmeasuringpointPackage.eNS_URI, SimulizarmeasuringpointPackage.eINSTANCE);
-
         resourceSet.getPackageRegistry().put(ExperimentDataPackageImpl.eNS_URI, ExperimentDataPackage.eINSTANCE);
         resourceSet.getPackageRegistry().put(RepositoryPackage.eNS_URI, RepositoryPackage.eINSTANCE);
         return resourceSet;

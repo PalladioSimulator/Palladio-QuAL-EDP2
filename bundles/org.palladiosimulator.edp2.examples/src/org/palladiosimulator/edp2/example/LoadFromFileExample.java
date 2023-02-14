@@ -24,6 +24,9 @@ import org.palladiosimulator.edp2.models.ExperimentData.MeasurementRange;
 import org.palladiosimulator.edp2.models.ExperimentData.RawMeasurements;
 
 import org.palladiosimulator.edp2.models.Repository.Repositories;
+import org.palladiosimulator.pcmmeasuringpoint.PcmmeasuringpointPackage;
+
+import simulizarmeasuringpoint.SimulizarmeasuringpointPackage;
 
 /**
  * Contains an example how data can be loaded from a file with EDP2.
@@ -76,6 +79,11 @@ public class LoadFromFileExample {
      *            path to the directory containing the .edp2 and .edp2bin files.
      */
     private void loadRepo(final String meassuresDirectory) {
+        
+        // initialize these, because the edp2 model depends on them.
+        PcmmeasuringpointPackage pcmMeasuringpointPackage = PcmmeasuringpointPackage.eINSTANCE;
+        SimulizarmeasuringpointPackage simulizarMeasuringPointPackage = SimulizarmeasuringpointPackage.eINSTANCE;
+        
 
         this.repo = localFactory.eINSTANCE.createLocalDirectoryRepository();
         // the lowercase 'l' might be confusing, but localFactory is still a class.
