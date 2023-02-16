@@ -2,6 +2,7 @@ package org.palladiosimulator.edp2.example;
 
 import java.net.URL;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import javax.measure.Measure;
@@ -9,6 +10,9 @@ import javax.measure.quantity.Duration;
 import javax.measure.unit.SI;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.URIConverter;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.palladiosimulator.edp2.dao.BinaryMeasurementsDao;
 import org.palladiosimulator.edp2.dao.MeasurementsDaoFactory;
 import org.palladiosimulator.edp2.dao.exception.DataNotAccessibleException;
@@ -56,6 +60,7 @@ public class LoadFromFileExample {
      */
     public static void main(final String[] args) {
         final LoadFromFileExample example = new LoadFromFileExample();
+        example.initPathmap();
         example.loadRepo("measures");
         example.printValues();
         //example.unloadRepo();
@@ -69,6 +74,24 @@ public class LoadFromFileExample {
     private void unloadRepo() {
         Repositories repos = RepositoryManager.getCentralRepository();
         RepositoryManager.removeRepository(repos, this.repo);
+    }
+    
+    /**
+     * Put the common metrics into the pathmap.
+     * 
+     * Otherwise, parts of the EPD2 metadata cannot be resolved.
+     * 
+     */
+    private void initPathmap() {
+        final URL url = getClass().getClassLoader().getResource("commonMetrics.metricspec");  // c.f. plugin dependecies, it's really there
+        final URI uri = URI.createURI(url.toString()).trimSegments(1);
+        
+        
+        URIConverter.URI_MAP.put(URI.createURI("pathmap://METRIC_SPEC_MODELS/"), uri);
+                
+        final Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
+        final Map<String, Object> m = reg.getExtensionToFactoryMap();
+        m.put("metricspec", new XMIResourceFactoryImpl());
     }
 
     /**
@@ -107,8 +130,7 @@ public class LoadFromFileExample {
     private void printValues() {
         List<ExperimentGroup> experGroups = this.repo.getExperimentGroups();
 
-        for (ExperimentGroup group : experGroups) {
-
+        for (ExperimentGroup group : experGroups) {            
             final DataSeries series = getDataSeriese(group);
 
             MeasurementsDaoFactory factory = repo.getMeasurementsDaoFactory();
@@ -159,7 +181,7 @@ public class LoadFromFileExample {
      *            experiment group to get the data series from.
      * @return first data series from the group.
      */
-    private DataSeries getDataSeriese(final ExperimentGroup group) {
+    private DataSeries getDataSeriese(final ExperimentGroup group) {    	
         final ExperimentSetting setting = group.getExperimentSettings()
             .get(0);
         final ExperimentRun run = setting.getExperimentRuns()
@@ -173,5 +195,4 @@ public class LoadFromFileExample {
             .get(0);
         return series;
     }
-
 }
