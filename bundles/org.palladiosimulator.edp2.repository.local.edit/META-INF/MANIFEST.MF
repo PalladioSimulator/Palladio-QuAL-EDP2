@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.edp2.repository.local.edit;singleton:=true
-Bundle-Version: 5.1.0.qualifier
+Bundle-Version: 5.2.0
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.edp2.local.provider.LocalrepositoryEditPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -18,5 +18,5 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.identifier.edit;visibility:=reexport,
  org.palladiosimulator.metricspec;visibility:=reexport,
  org.palladiosimulator.metricspec.edit;visibility:=reexport,
- org.palladiosimulator.edp2.dao;bundle-version="5.1.0"
+ org.palladiosimulator.edp2.dao;bundle-version="5.2.0"
 Bundle-ActivationPolicy: lazy
