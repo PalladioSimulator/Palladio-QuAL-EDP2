@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-	<feature url="features/org.palladiosimulator.edp2.feature_5.1.0.qualifier.jar" id="org.palladiosimulator.edp2.feature" version="5.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.edp2.feature_5.2.0.qualifier.jar" id="org.palladiosimulator.edp2.feature" version="5.2.0.qualifier">
 	   <category name="org.palladiosimulator.qual.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.edp2.feature.source_5.1.0.qualifier.jar" id="org.palladiosimulator.edp2.feature.source" version="5.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.edp2.feature.source_5.2.0.qualifier.jar" id="org.palladiosimulator.edp2.feature.source" version="5.2.0.qualifier">
 	   <category name="org.palladiosimulator.qual.source.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.edp2.ui.feature_5.1.0.qualifier.jar" id="org.palladiosimulator.edp2.ui.feature" version="5.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.edp2.ui.feature_5.2.0.qualifier.jar" id="org.palladiosimulator.edp2.ui.feature" version="5.2.0.qualifier">
 	   <category name="org.palladiosimulator.qual.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.edp2.ui.feature.source_5.1.0.qualifier.jar" id="org.palladiosimulator.edp2.ui.feature.source" version="5.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.edp2.ui.feature.source_5.2.0.qualifier.jar" id="org.palladiosimulator.edp2.ui.feature.source" version="5.2.0.qualifier">
 	   <category name="org.palladiosimulator.qual.source.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.edp2.filter.additional.feature_5.1.0.qualifier.jar" id="org.palladiosimulator.edp2.filter.additional.feature" version="5.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.edp2.filter.additional.feature_5.2.0.qualifier.jar" id="org.palladiosimulator.edp2.filter.additional.feature" version="5.2.0.qualifier">
 	   <category name="org.palladiosimulator.qual.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.edp2.filter.additional.feature.source_5.1.0.qualifier.jar" id="org.palladiosimulator.edp2.filter.additional.feature.source" version="5.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.edp2.filter.additional.feature.source_5.2.0.qualifier.jar" id="org.palladiosimulator.edp2.filter.additional.feature.source" version="5.2.0.qualifier">
 	   <category name="org.palladiosimulator.qual.source.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.edp2.distancemetrics.feature_5.1.0.qualifier.jar" id="org.palladiosimulator.edp2.distancemetrics.feature" version="5.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.edp2.distancemetrics.feature_5.2.0.qualifier.jar" id="org.palladiosimulator.edp2.distancemetrics.feature" version="5.2.0.qualifier">
 	   <category name="org.palladiosimulator.qual.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.edp2.distancemetrics.feature.source_5.1.0.qualifier.jar" id="org.palladiosimulator.edp2.distancemetrics.feature.source" version="5.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.edp2.distancemetrics.feature.source_5.2.0.qualifier.jar" id="org.palladiosimulator.edp2.distancemetrics.feature.source" version="5.2.0.qualifier">
 	   <category name="org.palladiosimulator.qual.source.category"/>
 	</feature>
 	<category-def name="org.palladiosimulator.qual.category" label="Quality Analysis Lab">
