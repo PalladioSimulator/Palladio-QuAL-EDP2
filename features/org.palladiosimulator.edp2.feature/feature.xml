@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.edp2.feature"
       label="EDP2 Core Feature"
-      version="5.2.0.qualifier"
+      version="5.2.1.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">

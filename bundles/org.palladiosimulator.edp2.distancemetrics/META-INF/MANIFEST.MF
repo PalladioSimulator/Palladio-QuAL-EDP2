@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DistanceMetrics
 Bundle-SymbolicName: org.palladiosimulator.edp2.distancemetrics;singleton:=true
-Bundle-Version: 5.2.0.qualifier
+Bundle-Version: 5.2.1.qualifier
 Bundle-Activator: org.palladiosimulator.edp2.distancemetrics.Activator
 Require-Bundle: org.eclipse.core.runtime,
- org.palladiosimulator.edp2;bundle-version="5.2.0";visibility:=reexport,
- org.palladiosimulator.edp2.util;bundle-version="5.2.0";visibility:=reexport,
+ org.palladiosimulator.edp2;bundle-version="5.2.1";visibility:=reexport,
+ org.palladiosimulator.edp2.util;bundle-version="5.2.1";visibility:=reexport,
  org.palladiosimulator.edp2.datastream,
  org.palladiosimulator.measurementframework,
  org.jscience,

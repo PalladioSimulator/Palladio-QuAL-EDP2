@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EDP2 DAO Interface for extensible storage of experiment data
 Bundle-SymbolicName: org.palladiosimulator.edp2.dao;singleton:=true
-Bundle-Version: 5.2.0.qualifier
+Bundle-Version: 5.2.1.qualifier
 Bundle-Vendor: palladiosimulator.org
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.jscience;bundle-version="4.1.3",
