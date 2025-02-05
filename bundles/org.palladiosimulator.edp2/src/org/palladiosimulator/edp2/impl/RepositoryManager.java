@@ -3,6 +3,7 @@
  */
 package org.palladiosimulator.edp2.impl;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -34,7 +35,8 @@ public class RepositoryManager {
      *            The new repository to add.
      */
     public static void addRepository(final Repositories repos, final Repository newRepo) {
-        repos.getAvailableRepositories().add(newRepo);
+        repos.getAvailableRepositories()
+            .add(newRepo);
         if (newRepo.canOpen()) {
             try {
                 newRepo.open();
@@ -54,7 +56,8 @@ public class RepositoryManager {
      *            The repository to remove.
      */
     public static void removeRepository(final Repositories repos, final Repository repo) {
-        assert (repos.getAvailableRepositories().indexOf(repo) > -1); // repo must be in list
+        assert (repos.getAvailableRepositories()
+            .indexOf(repo) > -1); // repo must be in list
         if (repo.canClose()) {
             try {
                 repo.close();
@@ -62,8 +65,26 @@ public class RepositoryManager {
                 LOGGER.log(Level.WARNING, "Could not close repository before removing it from the list.", e);
             }
         }
-        repos.getAvailableRepositories().remove(repo);
+        repos.getAvailableRepositories()
+            .remove(repo);
         LOGGER.log(Level.INFO, "Repository is removed.");
+    }
+
+    public static void clearRepositories(Repositories repos) {
+        List<Repository> availableRepositories = repos.getAvailableRepositories();
+        try {
+            for (Repository repository : availableRepositories) {
+                if (repository.canClose()) {
+                    try {
+                        repository.close();
+                    } catch (DataNotAccessibleException e) {
+                        LOGGER.log(Level.WARNING, "Could not close repository before removing it from the list.", e);
+                    }
+                }
+            }
+        } finally {
+            availableRepositories.clear();
+        }
     }
 
     /**
@@ -83,7 +104,8 @@ public class RepositoryManager {
      */
     public static Repository getRepositoryFromUUID(final String uuid) {
         for (final Repository repository : centralRepository.getAvailableRepositories()) {
-            if (repository.getId().equals(uuid)) {
+            if (repository.getId()
+                .equals(uuid)) {
                 return repository;
             }
         }
