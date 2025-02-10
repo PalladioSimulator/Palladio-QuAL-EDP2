@@ -10,7 +10,7 @@ import java.io.RandomAccessFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.measure.quantity.Quantity;
+import jakarta.measure.quantity.Quantity;
 
 import org.eclipse.net4j.util.io.ExtendedDataInputStream;
 import org.eclipse.net4j.util.io.ExtendedDataOutputStream;

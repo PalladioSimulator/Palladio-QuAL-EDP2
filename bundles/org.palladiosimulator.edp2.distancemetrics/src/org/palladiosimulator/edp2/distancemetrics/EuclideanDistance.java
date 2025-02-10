@@ -2,8 +2,8 @@ package org.palladiosimulator.edp2.distancemetrics;
 
 import java.util.Iterator;
 
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.Unit;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.Unit;
 
 import org.jscience.physics.amount.Amount;
 

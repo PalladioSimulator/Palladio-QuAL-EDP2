@@ -10,9 +10,9 @@ import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 import java.util.List;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Dimensionless;
-import javax.measure.unit.Unit;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Dimensionless;
+import jakarta.measure.unit.Unit;
 
 import org.junit.Before;
 import org.junit.Test;

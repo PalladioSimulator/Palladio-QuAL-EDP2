@@ -7,9 +7,9 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
-import javax.measure.unit.SI;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Duration;
+import jakarta.measure.unit.SI;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;

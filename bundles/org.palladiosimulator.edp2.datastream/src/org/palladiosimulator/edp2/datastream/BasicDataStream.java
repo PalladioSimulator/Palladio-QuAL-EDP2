@@ -2,7 +2,7 @@ package org.palladiosimulator.edp2.datastream;
 
 import java.util.Iterator;
 
-import javax.measure.quantity.Quantity;
+import jakarta.measure.quantity.Quantity;
 
 import org.palladiosimulator.measurementframework.BasicMeasurement;
 import org.palladiosimulator.metricspec.BaseMetricDescription;

@@ -6,9 +6,9 @@ import java.io.RandomAccessFile;
 import java.util.AbstractList;
 import java.util.logging.Logger;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.Unit;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.Unit;
 
 import org.palladiosimulator.edp2.repository.local.dao.internal.backgroundlist.serializer.Serializer;
 import org.palladiosimulator.measurementframework.measure.IdentifierMeasure;

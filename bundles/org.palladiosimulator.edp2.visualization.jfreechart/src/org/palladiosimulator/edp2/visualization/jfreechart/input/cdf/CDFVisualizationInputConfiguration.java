@@ -3,8 +3,8 @@ package org.palladiosimulator.edp2.visualization.jfreechart.input.cdf;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.Unit;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.Unit;
 
 import org.palladiosimulator.edp2.datastream.configurable.reflective.ConfigurationProperty;
 import org.palladiosimulator.edp2.visualization.jfreechart.input.xyplot.XYPlotVisualizationInputConfiguration;

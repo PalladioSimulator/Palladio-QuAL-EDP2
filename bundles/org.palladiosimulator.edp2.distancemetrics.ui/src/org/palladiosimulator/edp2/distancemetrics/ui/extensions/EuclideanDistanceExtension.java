@@ -1,6 +1,6 @@
 package org.palladiosimulator.edp2.distancemetrics.ui.extensions;
 
-import javax.measure.quantity.Quantity;
+import jakarta.measure.quantity.Quantity;
 
 import org.jscience.physics.amount.Amount;
 import org.palladiosimulator.edp2.datastream.IDataStream;

@@ -12,11 +12,11 @@ import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.measure.MeasureFormat;
-import javax.measure.quantity.Dimensionless;
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.Unit;
-import javax.measure.unit.UnitFormat;
+import jakarta.measure.MeasureFormat;
+import jakarta.measure.quantity.Dimensionless;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.Unit;
+import jakarta.measure.unit.UnitFormat;
 
 import org.apache.commons.codec.binary.Base64;
 import org.eclipse.emf.ecore.EDataType;
@@ -32,9 +32,9 @@ public class ExperimentDataFactoryImpl extends ExperimentDataFactoryImplGen {
     private static final Logger LOGGER = Logger.getLogger(ExperimentDataFactoryImpl.class.getCanonicalName());
 
     @Override
-    public javax.measure.Measure<?, ?> createEJSMeasureFromString(final EDataType eDataType, final String initialValue) {
+    public jakarta.measure.Measure<?, ?> createEJSMeasureFromString(final EDataType eDataType, final String initialValue) {
         try {
-            return (javax.measure.Measure<?, ?>) MeasureFormat.getInstance(NumberFormat.getInstance(Locale.ENGLISH),
+            return (jakarta.measure.Measure<?, ?>) MeasureFormat.getInstance(NumberFormat.getInstance(Locale.ENGLISH),
                     UnitFormat.getInstance()).parseObject(initialValue);
         } catch (final ParseException e) {
             LOGGER.log(Level.SEVERE,
@@ -54,7 +54,7 @@ public class ExperimentDataFactoryImpl extends ExperimentDataFactoryImplGen {
         return result;
     }
 
-    private javax.measure.Measure readEJSMeasureObject(final String initialValue) {
+    private jakarta.measure.Measure readEJSMeasureObject(final String initialValue) {
         if (initialValue == null || initialValue.isEmpty()) {
             return null;
         }
@@ -66,7 +66,7 @@ public class ExperimentDataFactoryImpl extends ExperimentDataFactoryImplGen {
 
             // in case the measure has no dimension
             if (items.length < 2) {
-                return javax.measure.Measure.valueOf(value, Dimensionless.UNIT);
+                return jakarta.measure.Measure.valueOf(value, Dimensionless.UNIT);
             }
 
             final UnitFormat formatter = UnitFormat.getInstance();
@@ -83,12 +83,12 @@ public class ExperimentDataFactoryImpl extends ExperimentDataFactoryImplGen {
         if (unit == null) {
             unit = Dimensionless.UNIT;
         }
-        return javax.measure.Measure.valueOf(value, unit);
+        return jakarta.measure.Measure.valueOf(value, unit);
     }
 
     @Override
-    public javax.measure.Measure createEJSDurationMeasureFromString(final EDataType eDataType, final String initialValue) {
-        return (javax.measure.Measure) this.readObject(initialValue);
+    public jakarta.measure.Measure createEJSDurationMeasureFromString(final EDataType eDataType, final String initialValue) {
+        return (jakarta.measure.Measure) this.readObject(initialValue);
     }
 
     @Override

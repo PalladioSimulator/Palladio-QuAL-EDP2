@@ -5,8 +5,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Predicate;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Duration;
 
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IPersistableElement;

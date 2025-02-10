@@ -3,8 +3,8 @@ package org.palladiosimulator.edp2.filter.warmup;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.measure.quantity.Duration;
-import javax.measure.unit.Unit;
+import jakarta.measure.quantity.Duration;
+import jakarta.measure.unit.Unit;
 
 import org.palladiosimulator.edp2.datastream.configurable.reflective.ConfigurationProperty;
 import org.palladiosimulator.edp2.datastream.configurable.reflective.ReflectivePropertyConfigurable;

@@ -1,6 +1,6 @@
 package org.palladiosimulator.edp2.distancemetrics.r.ui;
 
-import javax.measure.quantity.Quantity;
+import jakarta.measure.quantity.Quantity;
 
 import org.eclipse.swt.widgets.Composite;
 import org.jscience.physics.amount.Amount;

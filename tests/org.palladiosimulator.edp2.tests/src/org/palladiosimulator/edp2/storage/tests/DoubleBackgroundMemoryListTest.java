@@ -5,10 +5,10 @@ import static org.junit.Assert.assertEquals;
 import java.io.File;
 import java.io.IOException;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
-import javax.measure.unit.SI;
-import javax.measure.unit.Unit;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Duration;
+import jakarta.measure.unit.SI;
+import jakarta.measure.unit.Unit;
 
 import org.junit.Before;
 import org.junit.Test;

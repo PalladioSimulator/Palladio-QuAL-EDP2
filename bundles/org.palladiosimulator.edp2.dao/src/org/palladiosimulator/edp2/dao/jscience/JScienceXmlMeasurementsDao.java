@@ -5,8 +5,8 @@ package org.palladiosimulator.edp2.dao.jscience;
 
 import java.util.List;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Quantity;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Quantity;
 
 import org.palladiosimulator.edp2.dao.MeasurementsDao;
 

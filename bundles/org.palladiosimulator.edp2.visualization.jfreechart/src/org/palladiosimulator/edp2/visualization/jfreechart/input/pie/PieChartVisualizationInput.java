@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
-import javax.measure.unit.SI;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Duration;
+import jakarta.measure.unit.SI;
 
 import org.apache.commons.lang.mutable.MutableDouble;
 import org.eclipse.ui.IMemento;

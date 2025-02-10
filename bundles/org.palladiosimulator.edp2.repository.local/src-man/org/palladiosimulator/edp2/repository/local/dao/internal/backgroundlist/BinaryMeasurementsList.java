@@ -2,8 +2,8 @@ package org.palladiosimulator.edp2.repository.local.dao.internal.backgroundlist;
 
 import java.util.List;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Quantity;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Quantity;
 
 /**
  * Interface to abstract lists of measurements which are persisted in some kind of binary format.

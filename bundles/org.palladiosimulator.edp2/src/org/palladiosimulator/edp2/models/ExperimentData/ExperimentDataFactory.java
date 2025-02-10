@@ -1,6 +1,6 @@
 package org.palladiosimulator.edp2.models.ExperimentData;
 
-import javax.measure.unit.Unit;
+import jakarta.measure.unit.Unit;
 
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPoint;
 import org.palladiosimulator.metricspec.MetricDescription;

@@ -1,7 +1,7 @@
 package org.palladiosimulator.edp2.dao;
 
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.Unit;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.Unit;
 
 /**
  * Interface used to access a list of measurements of a certain type. An example is a list of double

@@ -6,10 +6,10 @@ package org.palladiosimulator.edp2.util.visitors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Dimensionless;
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.Unit;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Dimensionless;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.Unit;
 
 import org.palladiosimulator.edp2.dao.Edp2Dao;
 import org.palladiosimulator.edp2.dao.MeasurementsDao;

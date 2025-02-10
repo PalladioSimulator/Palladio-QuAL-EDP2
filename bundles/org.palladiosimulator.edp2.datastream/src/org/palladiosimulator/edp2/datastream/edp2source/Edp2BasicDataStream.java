@@ -2,8 +2,8 @@ package org.palladiosimulator.edp2.datastream.edp2source;
 
 import java.util.Iterator;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Quantity;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Quantity;
 
 import org.palladiosimulator.edp2.dao.MeasurementsDao;
 import org.palladiosimulator.edp2.dao.exception.DataNotAccessibleException;

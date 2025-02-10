@@ -1,7 +1,7 @@
 package org.palladiosimulator.edp2.dao.impl;
 
-import javax.measure.quantity.Dimensionless;
-import javax.measure.quantity.Quantity;
+import jakarta.measure.quantity.Dimensionless;
+import jakarta.measure.quantity.Quantity;
 
 import org.palladiosimulator.edp2.dao.BinaryMeasurementsDao;
 import org.palladiosimulator.edp2.dao.MeasurementsDaoFactory;

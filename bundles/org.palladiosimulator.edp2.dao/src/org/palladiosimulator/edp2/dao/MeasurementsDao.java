@@ -2,8 +2,8 @@ package org.palladiosimulator.edp2.dao;
 
 import java.util.List;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Quantity;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Quantity;
 
 import org.eclipse.net4j.util.io.ExtendedDataInputStream;
 import org.eclipse.net4j.util.io.ExtendedDataOutputStream;

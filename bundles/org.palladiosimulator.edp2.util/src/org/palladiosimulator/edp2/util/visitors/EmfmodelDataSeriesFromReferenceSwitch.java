@@ -1,6 +1,6 @@
 package org.palladiosimulator.edp2.util.visitors;
 
-import javax.measure.quantity.Quantity;
+import jakarta.measure.quantity.Quantity;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.palladiosimulator.edp2.dao.BinaryMeasurementsDao;

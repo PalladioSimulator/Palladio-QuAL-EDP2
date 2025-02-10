@@ -1,6 +1,6 @@
 package org.palladiosimulator.edp2.datastream.edp2source;
 
-import javax.measure.quantity.Quantity;
+import jakarta.measure.quantity.Quantity;
 
 import org.palladiosimulator.edp2.datastream.AbstractDataSource;
 import org.palladiosimulator.edp2.datastream.IDataSource;

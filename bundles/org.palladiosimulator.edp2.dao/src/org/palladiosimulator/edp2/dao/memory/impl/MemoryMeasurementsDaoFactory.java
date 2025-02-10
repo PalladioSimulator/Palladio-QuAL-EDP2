@@ -1,8 +1,8 @@
 package org.palladiosimulator.edp2.dao.memory.impl;
 
-import javax.measure.quantity.Dimensionless;
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.Unit;
+import jakarta.measure.quantity.Dimensionless;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.Unit;
 
 import org.palladiosimulator.edp2.dao.BinaryMeasurementsDao;
 import org.palladiosimulator.edp2.dao.MeasurementsDaoRegistry;

@@ -8,8 +8,8 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Duration;
 
 import org.palladiosimulator.edp2.dao.BinaryMeasurementsDao;
 import org.palladiosimulator.edp2.dao.MeasurementsDao;

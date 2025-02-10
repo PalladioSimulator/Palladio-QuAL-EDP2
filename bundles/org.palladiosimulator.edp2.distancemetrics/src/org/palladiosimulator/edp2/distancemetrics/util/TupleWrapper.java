@@ -1,9 +1,9 @@
 package org.palladiosimulator.edp2.distancemetrics.util;
 
 
-import javax.measure.Measure;
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.Unit;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Quantity;
+import jakarta.measure.unit.Unit;
 
 import org.palladiosimulator.measurementframework.TupleMeasurement;
 

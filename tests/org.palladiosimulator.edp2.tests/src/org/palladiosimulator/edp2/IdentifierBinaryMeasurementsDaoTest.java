@@ -7,7 +7,7 @@ import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
 
-import javax.measure.unit.Unit;
+import jakarta.measure.unit.Unit;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.util.EcoreUtil;

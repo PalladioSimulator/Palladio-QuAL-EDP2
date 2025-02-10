@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import javax.measure.Measure;
-import javax.measure.MeasureFormat;
-import javax.measure.unit.UnitFormat;
+import jakarta.measure.Measure;
+import jakarta.measure.MeasureFormat;
+import jakarta.measure.unit.UnitFormat;
 
 import org.apache.commons.lang.ClassUtils;
 import org.eclipse.emf.ecore.EObject;

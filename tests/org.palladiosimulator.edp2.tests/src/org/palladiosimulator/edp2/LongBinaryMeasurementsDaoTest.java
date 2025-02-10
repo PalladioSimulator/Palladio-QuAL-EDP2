@@ -10,10 +10,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
-import javax.measure.unit.SI;
-import javax.measure.unit.Unit;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Duration;
+import jakarta.measure.unit.SI;
+import jakarta.measure.unit.Unit;
 
 import org.junit.Test;
 import org.palladiosimulator.edp2.dao.BinaryMeasurementsDao;

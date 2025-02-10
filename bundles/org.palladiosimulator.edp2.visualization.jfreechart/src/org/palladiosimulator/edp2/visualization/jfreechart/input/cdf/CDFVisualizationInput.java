@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Quantity;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Quantity;
 
 import org.eclipse.ui.IMemento;
 import org.jfree.chart.axis.NumberAxis;

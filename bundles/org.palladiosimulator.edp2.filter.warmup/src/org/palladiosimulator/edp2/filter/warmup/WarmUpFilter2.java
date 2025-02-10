@@ -1,7 +1,7 @@
 package org.palladiosimulator.edp2.filter.warmup;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Duration;
 
 import org.palladiosimulator.edp2.datastream.IDataSource;
 import org.palladiosimulator.edp2.datastream.filter.AbstractFilter;

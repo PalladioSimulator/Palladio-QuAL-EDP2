@@ -10,11 +10,11 @@ import java.util.Random;
 
 import static org.junit.Assert.assertTrue;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Dimensionless;
-import javax.measure.quantity.Duration;
-import javax.measure.unit.SI;
-import javax.measure.unit.Unit;
+import jakarta.measure.Measure;
+import jakarta.measure.quantity.Dimensionless;
+import jakarta.measure.quantity.Duration;
+import jakarta.measure.unit.SI;
+import jakarta.measure.unit.Unit;
 
 import org.palladiosimulator.edp2.datastream.AbstractDataSource;
 import org.palladiosimulator.edp2.datastream.IDataStream;

@@ -1,6 +1,6 @@
 package org.palladiosimulator.edp2.util.visitors;
 
-import javax.measure.unit.Unit;
+import jakarta.measure.unit.Unit;
 
 import org.palladiosimulator.edp2.dao.MeasurementsDaoFactory;
 import org.palladiosimulator.edp2.models.ExperimentData.DataSeries;

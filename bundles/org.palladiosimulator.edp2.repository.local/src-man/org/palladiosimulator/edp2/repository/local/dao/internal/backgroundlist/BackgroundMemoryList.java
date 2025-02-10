@@ -2,7 +2,7 @@ package org.palladiosimulator.edp2.repository.local.dao.internal.backgroundlist;
 
 import java.io.IOException;
 
-import javax.measure.quantity.Quantity;
+import jakarta.measure.quantity.Quantity;
 
 /**
  * Interface of a @link {@link BinaryMeasurementsList} list, which uses a file on a drive as
