@@ -3,6 +3,9 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Datastream processing UI
 Bundle-SymbolicName: org.palladiosimulator.edp2.datastream.ui
 Bundle-Version: 5.2.1.qualifier
+Export-Package: org.palladiosimulator.edp2.datastream.ui.edp2source
+Require-Bundle: org.eclipse.ui;bundle-version="3.201.200",
+ org.palladiosimulator.edp2.datastream;bundle-version="5.2.1"
 Bundle-Vendor: palladiosimulator.org
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 
