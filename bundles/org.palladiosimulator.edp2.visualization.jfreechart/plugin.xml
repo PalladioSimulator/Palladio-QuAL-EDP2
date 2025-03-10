@@ -12,6 +12,10 @@
             id="org.palladiosimulator.edp2.visualization.jfreechart.input.histogram.HistogramVisualizationInputFactory">
       </factory>
       <factory
+            class="org.palladiosimulator.edp2.visualization.jfreechart.input.boxplot.BoxplotVisualizationInputFactory"
+            id="org.palladiosimulator.edp2.visualization.jfreechart.input.boxplot.BoxplotVisualizationInputFactory">
+      </factory>
+      <factory
             class="org.palladiosimulator.edp2.visualization.jfreechart.input.cdf.CDFVisualizationInputFactory"
             id="org.palladiosimulator.edp2.visualization.jfreechart.input.cdf.CDFVisualizationInputFactory">
       </factory>
@@ -52,6 +56,12 @@
             editor="org.palladiosimulator.edp2.visualization.editors.JFreeChartEditor"
             factory="org.palladiosimulator.edp2.visualization.jfreechart.input.histogram.HistogramVisualizationInputFactory"
             id="org.palladiosimulator.edp2.visualization.inputs.HistogramEditorInput">
+      </datasink>
+       <datasink
+            class="org.palladiosimulator.edp2.visualization.jfreechart.input.boxplot.BoxplotVisualizationInput"
+            editor="org.palladiosimulator.edp2.visualization.editors.JFreeChartEditor"
+            factory="org.palladiosimulator.edp2.visualization.jfreechart.input.boxplot.BoxplotVisualizationInputFactory"
+            id="org.palladiosimulator.edp2.visualization.inputs.BoxplotEditorInput">
       </datasink>
       <datasink
             class="org.palladiosimulator.edp2.visualization.jfreechart.input.cdf.CDFVisualizationInput"
@@ -110,6 +120,16 @@
             name="Histogram">
          <datasink
                sinkID="org.palladiosimulator.edp2.visualization.inputs.HistogramEditorInput">
+         </datasink>
+      </chainDescription>
+   </extension>
+   <extension
+         point="org.palladiosimulator.edp2.datastream.chainDescription">
+      <chainDescription
+            id="org.palladiosimulator.edp2.visualization.jfreechart.boxplot"
+            name="Boxplot Statistics">
+         <datasink
+               sinkID="org.palladiosimulator.edp2.visualization.inputs.BoxplotEditorInput">
          </datasink>
       </chainDescription>
    </extension>
