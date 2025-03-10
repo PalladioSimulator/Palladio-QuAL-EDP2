@@ -39,8 +39,6 @@ Documentation is available via: https://anonymous:anonymous@svnserver.informatik
       <import plugin="org.eclipse.ui.views.properties.tabbed"/>
       <import plugin="org.jfree.jfreechart" version="1.0.9" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2.visualization" version="5.1.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.edp2" version="5.1.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.edp2.datastream" version="5.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.metricspec.resources" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui" version="3.105.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2.util" version="5.1.0" match="greaterOrEqual"/>
@@ -81,6 +79,13 @@ Documentation is available via: https://anonymous:anonymous@svnserver.informatik
 
    <plugin
          id="org.palladiosimulator.edp2.datastream"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.palladiosimulator.edp2.datastream.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
