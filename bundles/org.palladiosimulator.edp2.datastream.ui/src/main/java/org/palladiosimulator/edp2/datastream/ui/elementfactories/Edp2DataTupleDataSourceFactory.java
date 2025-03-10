@@ -1,4 +1,4 @@
-package org.palladiosimulator.edp2.datastream.elementfactories;
+package org.palladiosimulator.edp2.datastream.ui.elementfactories;
 
 import org.eclipse.ui.IMemento;
 import org.palladiosimulator.edp2.EDP2Plugin;

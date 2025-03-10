@@ -3,7 +3,7 @@ package org.palladiosimulator.edp2.datastream.ui.edp2source;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IPersistableElement;
 import org.palladiosimulator.edp2.datastream.edp2source.Edp2DataTupleDataSource;
-import org.palladiosimulator.edp2.datastream.elementfactories.Edp2DataTupleDataSourceFactory;
+import org.palladiosimulator.edp2.datastream.ui.elementfactories.Edp2DataTupleDataSourceFactory;
 import org.palladiosimulator.edp2.models.ExperimentData.RawMeasurements;
 
 public class Edp2DataTupleDataSourceElement extends Edp2DataTupleDataSource implements IPersistableElement {

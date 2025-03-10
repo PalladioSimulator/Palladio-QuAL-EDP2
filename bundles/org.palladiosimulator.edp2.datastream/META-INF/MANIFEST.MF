@@ -20,5 +20,4 @@ Export-Package: org.palladiosimulator.edp2.datastream,
  org.palladiosimulator.edp2.datastream.configurable,
  org.palladiosimulator.edp2.datastream.configurable.reflective,
  org.palladiosimulator.edp2.datastream.edp2source,
- org.palladiosimulator.edp2.datastream.elementfactories,
  org.palladiosimulator.edp2.datastream.filter
