@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?>
-<target name="org.palladiosimulator.edp2 Target Platform" sequenceNumber="1">
+<?pde version="3.8"?><target name="org.palladiosimulator.edp2 Target Platform" sequenceNumber="1">
 	<locations>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-			<unit id="de.uka.ipd.sdq.identifier.feature.feature.group" version="0.0.0" />
-			<unit id="de.uka.ipd.sdq.dialogs.feature.feature.group" version="0.0.0" />
+			<unit id="de.uka.ipd.sdq.identifier.feature.feature.group" version="0.0.0"/>
+			<unit id="de.uka.ipd.sdq.dialogs.feature.feature.group" version="0.0.0"/>
 			<repository location="https://updatesite.palladio-simulator.com/palladio-core-commons/releases/latest/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-			<unit id="de.uka.ipd.sdq.identifier.feature.feature.group" version="0.0.0" />
-			<unit id="de.uka.ipd.sdq.dialogs.feature.feature.group" version="0.0.0" />
+			<unit id="de.uka.ipd.sdq.identifier.feature.feature.group" version="0.0.0"/>
+			<unit id="de.uka.ipd.sdq.dialogs.feature.feature.group" version="0.0.0"/>
 			<repository location="https://updatesite.palladio-simulator.com/palladio-core-commons/nightly/"/>
 		</location>	
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
@@ -21,30 +20,30 @@
 			<repository location="https://updatesite.palladio-simulator.com/palladio-thirdparty-wrapper/nightly/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-			<unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="0.0.0" />
+			<unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="0.0.0"/>
 			<repository location="https://updatesite.palladio-simulator.com/palladio-qual-measurementframework/releases/latest/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-			<unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="0.0.0" />
-			<repository location="https://updatesite.palladio-simulator.com/palladio-qual-measurementframework/nightly/"/>
+			<unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="0.0.0"/>
+			<repository location="https://updatesite.palladio-simulator.com/palladio-qual-measurementframework/branches/no_ui-edp2"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
-			<unit id="org.palladiosimulator.metricspec.feature.feature.group" version="0.0.0" />
+			<unit id="org.palladiosimulator.metricspec.feature.feature.group" version="0.0.0"/>
 			<repository location="https://updatesite.palladio-simulator.com/palladio-qual-metricspecification/releases/latest/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
-			<unit id="org.palladiosimulator.metricspec.feature.feature.group" version="0.0.0" />
-			<repository location="https://updatesite.palladio-simulator.com/palladio-qual-metricspecification/nightly/"/>
+			<unit id="org.palladiosimulator.metricspec.feature.feature.group" version="0.0.0"/>
+			<repository location="https://updatesite.palladio-simulator.com/palladio-qual-metricspecification/branches/no_ui-edp2"/>
 		</location>	
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
-			<unit id="org.eclipse.nebula.widgets.formattedtext.feature.feature.group" version="1.0.0.201605182147" />
+			<unit id="org.eclipse.nebula.widgets.formattedtext.feature.feature.group" version="1.0.0.201605182147"/>
 			<repository location="https://archive.eclipse.org/nebula/Q22016/incubation/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
-			<unit id="org.apache.batik.dom" version="0.0.0" />
-			<unit id="org.apache.batik.awt.util" version="0.0.0" />
-			<unit id="org.apache.batik.svggen" version="0.0.0" />
-			<unit id="org.apache.commons.lang" version="0.0.0" />
+			<unit id="org.apache.batik.dom" version="0.0.0"/>
+			<unit id="org.apache.batik.awt.util" version="0.0.0"/>
+			<unit id="org.apache.batik.svggen" version="0.0.0"/>
+			<unit id="org.apache.commons.lang" version="0.0.0"/>
 			<repository location="https://download.eclipse.org/tools/orbit/downloads/2023-03/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
