@@ -21,7 +21,8 @@ Require-Bundle: org.jfree.jfreechart;bundle-version="1.0.9",
  org.palladiosimulator.edp2.visualization;bundle-version="5.2.1",
  org.apache.batik.dom;bundle-version="1.14.0",
  org.apache.batik.svggen;bundle-version="1.14.0",
- org.apache.batik.awt.util;bundle-version="1.14.0"
+ org.apache.batik.awt.util;bundle-version="1.14.0",
+ org.palladiosimulator.edp2.datastream.ui;bundle-version="5.2.1"
 Export-Package:  org.palladiosimulator.edp2.visualization.jfreechart.editor,
  org.palladiosimulator.edp2.visualization.jfreechart.input,
  org.palladiosimulator.edp2.visualization.jfreechart.input.histogram,

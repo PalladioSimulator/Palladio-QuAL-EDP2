@@ -10,7 +10,6 @@ Require-Bundle: org.palladiosimulator.edp2;bundle-version="5.2.1";visibility:=re
  org.palladiosimulator.metricspec;bundle-version="1.0.0";visibility:=reexport,
  org.palladiosimulator.measurementframework;visibility:=reexport,
  org.palladiosimulator.commons;visibility:=reexport,
- org.eclipse.ui;bundle-version="3.105.0",
  org.eclipse.equinox.registry,
  org.apache.commons.lang;bundle-version="2.6.0",
  org.palladiosimulator.edp2.dao;bundle-version="5.2.1";visibility:=reexport,
@@ -20,5 +19,4 @@ Export-Package: org.palladiosimulator.edp2.datastream,
  org.palladiosimulator.edp2.datastream.configurable,
  org.palladiosimulator.edp2.datastream.configurable.reflective,
  org.palladiosimulator.edp2.datastream.edp2source,
- org.palladiosimulator.edp2.datastream.elementfactories,
  org.palladiosimulator.edp2.datastream.filter
