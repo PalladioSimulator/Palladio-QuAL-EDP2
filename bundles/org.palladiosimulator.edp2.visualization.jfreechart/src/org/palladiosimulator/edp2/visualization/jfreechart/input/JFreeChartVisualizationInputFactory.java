@@ -6,7 +6,7 @@ import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.ui.IElementFactory;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IPersistableElement;
-import org.palladiosimulator.edp2.datastream.configurable.PropertyConfigurableElementFactory;
+import org.palladiosimulator.edp2.datastream.ui.configurable.PropertyConfigurableElementFactory;
 
 /**
  * Factory class for {@link JFreeChartVisualizationInput}. Invokes persistence of all child elements

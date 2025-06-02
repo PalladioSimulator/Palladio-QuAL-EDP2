@@ -13,5 +13,6 @@ Require-Bundle: org.palladiosimulator.edp2.datastream,
  org.palladiosimulator.edp2.visualization;bundle-version="5.2.1",
  org.palladiosimulator.edp2;bundle-version="5.2.1",
  org.eclipse.jface,
- org.palladiosimulator.commons
+ org.palladiosimulator.commons,
+ org.palladiosimulator.edp2.datastream.ui;bundle-version="5.2.1"
 Bundle-ActivationPolicy: lazy

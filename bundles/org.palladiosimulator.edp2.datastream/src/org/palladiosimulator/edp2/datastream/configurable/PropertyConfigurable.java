@@ -8,11 +8,11 @@ import java.util.Set;
 import org.apache.commons.lang.ClassUtils;
 import org.palladiosimulator.commons.designpatterns.AbstractObservable;
 
-public abstract class PropertyConfigurable extends AbstractObservable<IPropertyListener> implements
-IPropertyConfigurable {
+public abstract class PropertyConfigurable extends AbstractObservable<IPropertyListener>
+        implements IPropertyConfigurable {
 
-    static final Object NOT_SET = new Object();
-    private final Map<String, Object> properties = new HashMap<String, Object>();
+    public static final Object NOT_SET = new Object();
+    private final Map<String, Object> properties = new HashMap<>();
     protected final Set<String> keys;
 
     public PropertyConfigurable() {
@@ -46,7 +46,8 @@ IPropertyConfigurable {
                 throw new IllegalArgumentException("New properties has null value for key " + key);
             }
             if (newProperties.get(key) != NOT_SET) {
-                final Class<?> fromClass = newProperties.get(key).getClass();
+                final Class<?> fromClass = newProperties.get(key)
+                    .getClass();
                 final Class<?> propertyType = getPropertyType(key);
                 if (!ClassUtils.isAssignable(fromClass, propertyType, true)) {
                     throw new IllegalArgumentException("New properties have wrong type for " + key);
@@ -58,10 +59,12 @@ IPropertyConfigurable {
             final Object newValue = newProperties.get(key);
             properties.put(key, newProperties.get(key));
             if ((newValue == null && oldValue != null) || (newValue != null && !newValue.equals(oldValue))) {
-                this.getEventDispatcher().propertyChanged(key, oldValue, newValue);
+                this.getEventDispatcher()
+                    .propertyChanged(key, oldValue, newValue);
             }
         }
-        this.getEventDispatcher().propertyChangeCompleted();
+        this.getEventDispatcher()
+            .propertyChangeCompleted();
     }
 
     @Override

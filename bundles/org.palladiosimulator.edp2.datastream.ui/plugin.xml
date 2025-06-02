@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.elementFactories">
+      <factory
+            class="org.palladiosimulator.edp2.datastream.ui.elementfactories.Edp2DataTupleDataSourceFactory"
+            id="org.palladiosimulator.edp2.datastream.elementfactories.Edp2DataTupleDataSourceFactory">
+      </factory>
+   </extension>
+
+</plugin>

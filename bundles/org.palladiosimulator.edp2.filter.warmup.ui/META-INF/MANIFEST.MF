@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Warmup Filter UI
+Bundle-SymbolicName: org.palladiosimulator.edp2.filter.warmup.ui
+Bundle-Version: 5.2.1.qualifier
+Bundle-Vendor: %providerName
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+

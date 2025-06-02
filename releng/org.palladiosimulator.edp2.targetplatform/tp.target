@@ -41,10 +41,11 @@
 			<repository location="https://archive.eclipse.org/nebula/Q22016/incubation/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
-			<unit id="org.apache.batik.dom" version="0.0.0" />
-			<unit id="org.apache.batik.awt.util" version="0.0.0" />
-			<unit id="org.apache.batik.svggen" version="0.0.0" />
-			<unit id="org.apache.commons.lang" version="0.0.0" />
+			<unit id="org.apache.batik.dom" version="0.0.0"/>
+			<unit id="org.apache.batik.awt.util" version="0.0.0"/>
+			<unit id="org.apache.batik.svggen" version="0.0.0"/>
+			<unit id="org.apache.commons.lang" version="0.0.0"/>
+			<unit id="org.apache.commons.lang3" version="0.0.0"/>
 			<repository location="https://download.eclipse.org/tools/orbit/downloads/2023-03/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">

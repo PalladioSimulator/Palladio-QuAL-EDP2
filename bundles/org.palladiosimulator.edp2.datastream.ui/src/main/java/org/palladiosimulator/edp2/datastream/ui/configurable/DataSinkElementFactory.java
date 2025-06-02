@@ -1,4 +1,4 @@
-package org.palladiosimulator.edp2.datastream.configurable;
+package org.palladiosimulator.edp2.datastream.ui.configurable;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,6 +8,7 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IPersistableElement;
 import org.palladiosimulator.edp2.datastream.IDataSink;
 import org.palladiosimulator.edp2.datastream.IDataSource;
+import org.palladiosimulator.edp2.datastream.configurable.IPropertyConfigurable;
 
 public abstract class DataSinkElementFactory extends PropertyConfigurableElementFactory {
 
