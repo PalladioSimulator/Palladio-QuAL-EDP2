@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Batchexport
 Bundle-SymbolicName: org.palladiosimulator.edp2.batchexport;singleton:=true
-Bundle-Version: 5.2.2
+Bundle-Version: 6.0.0.qualifier
 Require-Bundle: org.palladiosimulator.edp2;bundle-version="5.2.2",
  org.palladiosimulator.edp2.dao;bundle-version="5.2.2",
  org.palladiosimulator.edp2.datastream;bundle-version="5.2.2",

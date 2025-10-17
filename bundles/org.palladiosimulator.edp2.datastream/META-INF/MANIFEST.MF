@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Datastream processing (datasource, filter, adapter)
 Bundle-SymbolicName: org.palladiosimulator.edp2.datastream;singleton:=true
-Bundle-Version: 5.2.2
+Bundle-Version: 6.0.0.qualifier
 Bundle-Vendor: palladiosimulator.org
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.palladiosimulator.edp2;bundle-version="5.2.2";visibility:=reexport,
