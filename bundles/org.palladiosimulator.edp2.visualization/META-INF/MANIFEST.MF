@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Visualization
 Bundle-SymbolicName: org.palladiosimulator.edp2.visualization;singleton:=true
-Bundle-Version: 6.0.0.qualifier
+Bundle-Version: 5.2.2
 Bundle-Activator: org.palladiosimulator.edp2.visualization.Activator
 Require-Bundle: org.palladiosimulator.edp2;bundle-version="5.2.2",
  org.jscience;bundle-version="4.1.3",
