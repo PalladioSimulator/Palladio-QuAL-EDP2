@@ -4,21 +4,21 @@ Bundle-Name: DistanceMetrics Tests
 Bundle-SymbolicName: org.palladiosimulator.edp2.distancemetrics.tests
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.palladiosimulator.edp2.distancemetrics.tests.Activator
-Require-Bundle: org.palladiosimulator.edp2.dao;bundle-version="1.0.0",
+Require-Bundle: org.palladiosimulator.edp2.dao,
  org.eclipse.ui,
  org.palladiosimulator.edp2.repository.local,
  org.eclipse.emf.common,
  org.eclipse.core.runtime,
- org.palladiosimulator.edp2.distancemetrics;bundle-version="1.0.0";visibility:=reexport,
+ org.palladiosimulator.edp2.distancemetrics;visibility:=reexport,
  org.junit;bundle-version="4.12.0",
  org.jscience,
  org.eclipse.emf.ecore,
  org.palladiosimulator.edp2.datastream,
- org.palladiosimulator.measurementframework;bundle-version="1.0.0",
+ org.palladiosimulator.measurementframework,
  org.palladiosimulator.edp2,
- org.palladiosimulator.commons;bundle-version="1.0.0",
+ org.palladiosimulator.commons,
  org.palladiosimulator.metricspec,
- org.palladiosimulator.edp2.distancemetrics.r;bundle-version="1.0.0"
+ org.palladiosimulator.edp2.distancemetrics.r
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Export-Package: org.palladiosimulator.edp2.distancemetrics.tests
