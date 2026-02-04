@@ -54,5 +54,4 @@ public class Edp2DataTupleDataSourceFactory extends PropertyConfigurableElementF
             memento.putString(MEASUREMENTS_UUID, measurements.getId());
         }
     }
-
 }

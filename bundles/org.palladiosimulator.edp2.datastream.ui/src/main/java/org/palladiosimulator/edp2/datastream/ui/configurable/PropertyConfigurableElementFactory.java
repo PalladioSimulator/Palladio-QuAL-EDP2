@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.measure.unit.Unit;
+
 import org.apache.commons.lang3.ClassUtils;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EObject;
@@ -18,6 +20,9 @@ import org.eclipse.ui.PlatformUI;
 import org.palladiosimulator.commons.emfutils.EMFLoadHelper;
 import org.palladiosimulator.edp2.datastream.configurable.IPropertyConfigurable;
 import org.palladiosimulator.edp2.datastream.configurable.PropertyConfigurable;
+import org.palladiosimulator.edp2.datastream.edp2source.Edp2DataTupleDataSource;
+import org.palladiosimulator.edp2.datastream.ui.edp2source.Edp2DataTupleDataSourceElement;
+import org.palladiosimulator.edp2.datastream.ui.elementfactories.Edp2DataTupleDataSourceFactory;
 
 /**
  * A factory for persistence of {@link IDataFlow} elements.
@@ -73,7 +78,12 @@ public abstract class PropertyConfigurableElementFactory implements IElementFact
     @SuppressWarnings("rawtypes")
     public static void persistChildren(final IMemento memento, final Collection children) {
         for (final Object childObject : children) {
-            final IPersistableElement child = (IPersistableElement) childObject;
+        	final IPersistableElement child;
+        	if (childObject instanceof Edp2DataTupleDataSource) {
+        		child = new Edp2DataTupleDataSourceElement((Edp2DataTupleDataSource)childObject);
+        	} else {
+                child = (IPersistableElement) childObject;
+        	}
             final IMemento subMemento = memento.createChild(CHILD_INPUTS_MEMENTO_TAG, child.getFactoryId());
             child.saveState(subMemento);
         }
@@ -86,8 +96,16 @@ public abstract class PropertyConfigurableElementFactory implements IElementFact
             final String id = subMemento.getID();
             final IElementFactory inputFactory = PlatformUI.getWorkbench()
                 .getElementFactory(id);
-            final IPersistableElement createdInput = (IPersistableElement) inputFactory.createElement(subMemento);
-            result.add(createdInput);
+            final IPersistableElement createdInput;
+            if (inputFactory != null) {
+            	if (inputFactory instanceof Edp2DataTupleDataSourceFactory) {
+                	final Edp2DataTupleDataSource input = (Edp2DataTupleDataSource) ((Edp2DataTupleDataSourceFactory) inputFactory).createElement(memento);
+                	createdInput = new Edp2DataTupleDataSourceElement(input);
+                } else {
+                	createdInput = (IPersistableElement) inputFactory.createElement(subMemento);
+                }
+            	result.add(createdInput);
+            }
         }
         return result;
     }
@@ -130,6 +148,8 @@ public abstract class PropertyConfigurableElementFactory implements IElementFact
             return new Color(col.getRed(), col.getBlue(), col.getBlue(), Integer.parseInt(string.substring(0, 1), 16));
         } else if (ClassUtils.isAssignable(propertyType, EObject.class, true)) {
             return EMFLoadHelper.loadAndResolveEObject(string);
+        } else if (ClassUtils.isAssignable(propertyType, Unit.class, true)) {
+        	return Unit.valueOf(string);
         }
         throw new UnsupportedOperationException("Deserialize of unsupported type found: " + propertyType);
     }

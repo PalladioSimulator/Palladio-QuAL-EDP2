@@ -4,16 +4,18 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IPersistableElement;
 import org.palladiosimulator.edp2.datastream.edp2source.Edp2DataTupleDataSource;
 import org.palladiosimulator.edp2.datastream.ui.elementfactories.Edp2DataTupleDataSourceFactory;
-import org.palladiosimulator.edp2.models.ExperimentData.RawMeasurements;
 
-public class Edp2DataTupleDataSourceElement extends Edp2DataTupleDataSource implements IPersistableElement {
-    public Edp2DataTupleDataSourceElement(RawMeasurements measurements) {
-        super(measurements);
+public class Edp2DataTupleDataSourceElement implements IPersistableElement {
+	
+	private Edp2DataTupleDataSource source;
+	
+    public Edp2DataTupleDataSourceElement(Edp2DataTupleDataSource source) {
+    	this.source = source;
     }
 
     @Override
     public void saveState(final IMemento memento) {
-        Edp2DataTupleDataSourceFactory.saveState(memento, this);
+        Edp2DataTupleDataSourceFactory.saveState(memento, source);
     }
 
     @Override
