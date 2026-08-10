@@ -13,4 +13,4 @@ Require-Bundle: org.palladiosimulator.edp2,
  org.palladiosimulator.edp2.dao,
  org.palladiosimulator.edp2.repository.local
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21

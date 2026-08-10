@@ -4,7 +4,7 @@ Bundle-Name: Datastream processing (datasource, filter, adapter)
 Bundle-SymbolicName: org.palladiosimulator.edp2.datastream;singleton:=true
 Bundle-Version: 6.0.0.qualifier
 Bundle-Vendor: palladiosimulator.org
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: org.palladiosimulator.edp2;visibility:=reexport,
  org.jscience;bundle-version="4.1.3";visibility:=reexport,
  org.palladiosimulator.metricspec;visibility:=reexport,

@@ -4,7 +4,7 @@ Bundle-Name: Warmup Filter
 Bundle-SymbolicName: org.palladiosimulator.edp2.filter.warmup;singleton:=true
 Bundle-Version: 6.0.0.qualifier
 Bundle-Vendor: %providerName
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: org.palladiosimulator.edp2.datastream,
  org.palladiosimulator.metricspec,
  org.palladiosimulator.measurementframework,

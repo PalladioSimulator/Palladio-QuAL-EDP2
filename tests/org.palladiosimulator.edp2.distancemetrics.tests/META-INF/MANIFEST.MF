@@ -19,6 +19,6 @@ Require-Bundle: org.palladiosimulator.edp2.dao,
  org.palladiosimulator.commons,
  org.palladiosimulator.metricspec,
  org.palladiosimulator.edp2.distancemetrics.r
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-ActivationPolicy: lazy
 Export-Package: org.palladiosimulator.edp2.distancemetrics.tests
