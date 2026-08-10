@@ -19,7 +19,6 @@ Documentation is available via: https://anonymous:anonymous@svnserver.informatik
       <import plugin="de.uka.ipd.sdq.identifier"/>
       <import plugin="org.jscience" version="4.1.3" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.ecore.xmi" version="2.5.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.query" version="1.2.100" match="greaterOrEqual"/>
       <import plugin="org.eclipse.net4j" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.databinding" version="1.1.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.databinding.property" version="1.2.0" match="greaterOrEqual"/>
