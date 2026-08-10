@@ -9,5 +9,5 @@ Require-Bundle: org.eclipse.ui;bundle-version="3.201.200",
  org.apache.commons.lang3;bundle-version="3.1.0",
  org.palladiosimulator.edp2.datastream
 Bundle-Vendor: palladiosimulator.org
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 
