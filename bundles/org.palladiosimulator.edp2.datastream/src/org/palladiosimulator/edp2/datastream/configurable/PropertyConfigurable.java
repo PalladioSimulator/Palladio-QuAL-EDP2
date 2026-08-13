@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.commons.lang.ClassUtils;
+import org.apache.commons.lang3.ClassUtils;
 import org.palladiosimulator.commons.designpatterns.AbstractObservable;
 
 public abstract class PropertyConfigurable extends AbstractObservable<IPropertyListener>

@@ -13,7 +13,7 @@ import javax.measure.Measure;
 import javax.measure.MeasureFormat;
 import javax.measure.unit.UnitFormat;
 
-import org.apache.commons.lang.ClassUtils;
+import org.apache.commons.lang3.ClassUtils;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
