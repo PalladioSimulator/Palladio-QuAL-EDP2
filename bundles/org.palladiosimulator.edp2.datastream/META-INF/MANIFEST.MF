@@ -11,7 +11,7 @@ Require-Bundle: org.palladiosimulator.edp2;visibility:=reexport,
  org.palladiosimulator.measurementframework;visibility:=reexport,
  org.palladiosimulator.commons;visibility:=reexport,
  org.eclipse.equinox.registry,
- org.apache.commons.lang;bundle-version="2.6.0",
+ org.apache.commons.lang3;bundle-version="3.0.0",
  org.palladiosimulator.edp2.dao;visibility:=reexport,
  org.palladiosimulator.edp2.util;visibility:=reexport
 Export-Package: org.palladiosimulator.edp2.datastream,

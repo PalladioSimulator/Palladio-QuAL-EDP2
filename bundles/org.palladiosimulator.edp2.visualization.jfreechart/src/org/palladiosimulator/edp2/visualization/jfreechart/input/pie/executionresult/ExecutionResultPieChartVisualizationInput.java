@@ -3,7 +3,7 @@ package org.palladiosimulator.edp2.visualization.jfreechart.input.pie.executionr
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.lang.mutable.MutableInt;
+import org.apache.commons.lang3.mutable.MutableInt;
 import org.jfree.data.general.AbstractDataset;
 import org.jfree.data.general.DefaultPieDataset;
 import org.palladiosimulator.edp2.datastream.IDataSource;
