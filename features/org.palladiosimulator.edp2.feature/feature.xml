@@ -42,7 +42,6 @@ Documentation is available via: https://anonymous:anonymous@svnserver.informatik
       <import plugin="org.eclipse.ui" version="3.105.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2.util"/>
       <import plugin="org.eclipse.equinox.registry"/>
-      <import plugin="org.apache.commons.lang" version="2.6.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.net4j.util"/>
       <import plugin="org.palladiosimulator.edp2.repository.local"/>
       <import plugin="org.palladiosimulator.branding"/>
