@@ -38,7 +38,6 @@
       <import plugin="org.palladiosimulator.edp2.visualization"/>
       <import plugin="org.palladiosimulator.edp2.visualization.jfreechart"/>
       <import plugin="org.palladiosimulator.edp2.repository.local"/>
-      <import plugin="org.apache.commons.lang" version="2.6.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.dialogs"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.eclipse.emf.common.ui"/>
